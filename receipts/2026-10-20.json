@@ -24,29 +24,37 @@
     "scanned": 60,
     "newsletters": [
      {
-      "domain": "quora.com",
-      "uid": "22197"
+      "domain": "google.com",
+      "uid": "22198"
+     },
+     {
+      "domain": "tutellus.com",
+      "uid": "22202"
+     },
+     {
+      "domain": "centeia.com",
+      "uid": "22211"
+     },
+     {
+      "domain": "ollama.com",
+      "uid": "22215"
      },
      {
       "domain": "medium.com",
       "uid": "22219"
-     },
-     {
-      "domain": "m.weworkremotely.com",
-      "uid": "22234"
      }
     ],
-    "human": 2,
-    "notify": 42,
+    "human": 0,
+    "notify": 39,
     "unclassified": 0,
     "labeled": 0,
-    "unsub_links": 3,
+    "unsub_links": 5,
     "brain": "gemma-3-1b-it (local, llama.cpp)",
-    "deterministic_notifications": 35,
-    "ambiguous": 20,
+    "deterministic_notifications": 36,
+    "ambiguous": 19,
     "brain_classified": 14,
     "brain_used": true,
-    "skipped_no_unsub": 2
+    "skipped_no_unsub": 3
    },
    "brief": {
     "stories": 10,
@@ -55,72 +63,72 @@
      {
       "title": "Voxtral 3",
       "url": "https://mistral.ai/news/voxtral-3/",
-      "points": 233,
-      "comments": 58,
+      "points": 247,
+      "comments": 62,
       "gist": "Voxtral 3 is a new device."
      },
      {
       "title": "DeepInfer: High-performance inference framework for DeepSeek models",
       "url": "https://github.com/deepseek-ai/DeepInfer",
-      "points": 1894,
-      "comments": 722,
+      "points": 1897,
+      "comments": 726,
       "gist": "DeepSeek models require a high-performance inference framework."
-     },
-     {
-      "title": "EMudhra Intermediate CA Compromise",
-      "url": "https://emudhra.we-have-a-problem.com/",
-      "points": 289,
-      "comments": 142,
-      "gist": "The EMudhra Intermediate CA agreement is a compromise."
      },
      {
       "title": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
       "url": "https://github.com/google-pytorch/torch_tpu",
-      "points": 70,
-      "comments": 20,
+      "points": 81,
+      "comments": 24,
       "gist": "Google has made TorchTPU available to the public, a native PyTorch backend for TPUs."
+     },
+     {
+      "title": "EMudhra Intermediate CA Compromise",
+      "url": "https://emudhra.we-have-a-problem.com/",
+      "points": 297,
+      "comments": 144,
+      "gist": "The EMudhra Intermediate CA agreement was reached."
      },
      {
       "title": "Apple broke an essential presentation feature of iPads",
       "url": "https://teddysvoronos.com/2026-10-19-apple-broke-an-essential-presentation-feature-of-ipads/",
-      "points": 325,
-      "comments": 178,
+      "points": 327,
+      "comments": 185,
       "gist": "Apple has discontinued a key presentation feature on iPads."
+     },
+     {
+      "title": "Ofcom concedes defeat in 4chan case",
+      "url": "https://prestonbyrne.com/2026/10/20/ofcom-concedes-defeat/",
+      "points": 152,
+      "comments": 82,
+      "gist": "Ofcom conceded defeat in a 4chan case."
      },
      {
       "title": "Publish fake stats, get cited in LLMs",
       "url": "https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web",
-      "points": 232,
-      "comments": 122,
+      "points": 237,
+      "comments": 128,
       "gist": "Do not publish false data, as it may be used to influence LLMs."
      },
      {
       "title": "Facebook Pages require paid subscription to post more than two links per month",
       "url": "https://mastodon.gamedev.place/@AshleyGullen/117473851565913919",
-      "points": 324,
-      "comments": 269,
-      "gist": "Facebook requires a paid subscription for pages to post more than two links per month."
+      "points": 328,
+      "comments": 271,
+      "gist": "Facebook requires a paid subscription for pages to post more than two links monthly."
      },
      {
       "title": "How I got over 300 Tor exit nodes removed",
       "url": "https://kaba.cx/posts/20261020_Tor/",
-      "points": 193,
-      "comments": 52,
+      "points": 196,
+      "comments": 53,
       "gist": "I removed 300 Tor exit nodes during overnight maintenance."
      },
      {
-      "title": "Triplet of 'ghostly' galaxies hints at what dark matter is and isn't",
-      "url": "https://www.quantamagazine.org/triplet-of-ghostly-galaxies-hints-at-what-dark-matter-is-and-isnt-20261014/",
-      "points": 62,
-      "comments": 13,
-      "gist": "The headline describes a potential clue about dark matter’s nature."
-     },
-     {
-      "title": "JAXA is about to perform a Phobos sample return mission",
-      "url": "https://www.science.org/content/article/audacious-space-heist-japan-aims-bring-home-bits-martian-moon",
-      "points": 34,
-      "comments": 4,
-      "gist": "JAXA will send a spacecraft to study Phobos, a moon of Mars."
+      "title": "Tsrs: A Port of TypeScript to Rust",
+      "url": "https://blog.cloudflare.com/typescript-rust-port/",
+      "points": 189,
+      "comments": 92,
+      "gist": "The code is TypeScript, but it’s designed to be written in Rust."
      }
     ]
    }
@@ -130,7 +138,7 @@
  "entries": [
   {
    "i": 0,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'backup.tar-20261020-07.gz' to Archives/",
    "detail": {
@@ -143,11 +151,11 @@
     "to": "backup.tar-20261020-07.gz"
    },
    "prev": "0000000000000000000000000000000000000000000000000000000000000000",
-   "hash": "3e7f483bb57ab742f4f07646c673e18056ea16ecc2e569c4cdc18a8a2959a994"
+   "hash": "2823fa10173ab6da91de4291d6eb5ecc6b018fc967268757b4245d2d67c94f9e"
   },
   {
    "i": 1,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'backup.tar-20261020-19.gz' to Archives/",
    "detail": {
@@ -159,12 +167,12 @@
     "from": "Archives/backup.tar-20261020-19.gz",
     "to": "backup.tar-20261020-19.gz"
    },
-   "prev": "3e7f483bb57ab742f4f07646c673e18056ea16ecc2e569c4cdc18a8a2959a994",
-   "hash": "539fb732e11134a023eff3562866c20d68c7dd395db4abb4733bb1cb222815bb"
+   "prev": "2823fa10173ab6da91de4291d6eb5ecc6b018fc967268757b4245d2d67c94f9e",
+   "hash": "f273af26b3bc3525af7f474fe030cbcbe22bcaef0e9aadb678adcd6d3bdbc731"
   },
   {
    "i": 2,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'cat-video-20261020-05.mp4' to Media/",
    "detail": {
@@ -176,12 +184,12 @@
     "from": "Media/cat-video-20261020-05.mp4",
     "to": "cat-video-20261020-05.mp4"
    },
-   "prev": "539fb732e11134a023eff3562866c20d68c7dd395db4abb4733bb1cb222815bb",
-   "hash": "1a59c1d2bce74a264b31822e12ba94ce2ecd97feb726dbafdd78bf5ab8f50cfc"
+   "prev": "f273af26b3bc3525af7f474fe030cbcbe22bcaef0e9aadb678adcd6d3bdbc731",
+   "hash": "f9f4190f1bae3f547892d42d38230cd8569a15dcf921e271e6049fb62def7439"
   },
   {
    "i": 3,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'cat-video-20261020-17.mp4' to Media/",
    "detail": {
@@ -193,12 +201,12 @@
     "from": "Media/cat-video-20261020-17.mp4",
     "to": "cat-video-20261020-17.mp4"
    },
-   "prev": "1a59c1d2bce74a264b31822e12ba94ce2ecd97feb726dbafdd78bf5ab8f50cfc",
-   "hash": "7e75639767abb31ea0132157a83f2dc9283a983ecba3c344328421964d130dc0"
+   "prev": "f9f4190f1bae3f547892d42d38230cd8569a15dcf921e271e6049fb62def7439",
+   "hash": "50159e3308bdfbc2b304767c1efdd2b06c6b973fb247f1d1b1cdacb046c8ced8"
   },
   {
    "i": 4,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'contract-v2-20261020-11.docx' to Documents/",
    "detail": {
@@ -210,12 +218,12 @@
     "from": "Documents/contract-v2-20261020-11.docx",
     "to": "contract-v2-20261020-11.docx"
    },
-   "prev": "7e75639767abb31ea0132157a83f2dc9283a983ecba3c344328421964d130dc0",
-   "hash": "05873af9343306ca55d6fee59737c5c15b2012b8db6f2d33eff6c935c58f7409"
+   "prev": "50159e3308bdfbc2b304767c1efdd2b06c6b973fb247f1d1b1cdacb046c8ced8",
+   "hash": "4dbddb91f2beda0185db720ffe92ed61e27495fc0538e09d67bc7e123bb22ad9"
   },
   {
    "i": 5,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'contract-v2-20261020-23.docx' to Documents/",
    "detail": {
@@ -227,12 +235,12 @@
     "from": "Documents/contract-v2-20261020-23.docx",
     "to": "contract-v2-20261020-23.docx"
    },
-   "prev": "05873af9343306ca55d6fee59737c5c15b2012b8db6f2d33eff6c935c58f7409",
-   "hash": "4dfc24569486194085b3c8ebce4acef5882af93d16dcfb09792d6bbda87ba6c4"
+   "prev": "4dbddb91f2beda0185db720ffe92ed61e27495fc0538e09d67bc7e123bb22ad9",
+   "hash": "3b67878d4d1f00cfa69b3177f3ff5cf2b98fbb4baf80b06bf1b01fade2809050"
   },
   {
    "i": 6,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'data-export-20261020-04.csv' to Spreadsheets/",
    "detail": {
@@ -244,12 +252,12 @@
     "from": "Spreadsheets/data-export-20261020-04.csv",
     "to": "data-export-20261020-04.csv"
    },
-   "prev": "4dfc24569486194085b3c8ebce4acef5882af93d16dcfb09792d6bbda87ba6c4",
-   "hash": "bdfa60d306cded07020344cb7888b5c6a06cce7883a488a90dd8b71558ddfea5"
+   "prev": "3b67878d4d1f00cfa69b3177f3ff5cf2b98fbb4baf80b06bf1b01fade2809050",
+   "hash": "6b81a99887b4f03167c600651be977788b3705545d8aad73624a41e0b0161b43"
   },
   {
    "i": 7,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'data-export-20261020-16.csv' to Spreadsheets/",
    "detail": {
@@ -261,12 +269,12 @@
     "from": "Spreadsheets/data-export-20261020-16.csv",
     "to": "data-export-20261020-16.csv"
    },
-   "prev": "bdfa60d306cded07020344cb7888b5c6a06cce7883a488a90dd8b71558ddfea5",
-   "hash": "c995f4d5b60fdb0bbf6aac4f0970be12bb811d95aceb0dcccaedeb81acdcf98f"
+   "prev": "6b81a99887b4f03167c600651be977788b3705545d8aad73624a41e0b0161b43",
+   "hash": "912f406c806174cb1c99dc282cbd5b30a6f3a22ec5aca9ec3b22fef90e72d375"
   },
   {
    "i": 8,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'invoice-march-20261020-00.pdf' to Documents/",
    "detail": {
@@ -278,12 +286,12 @@
     "from": "Documents/invoice-march-20261020-00.pdf",
     "to": "invoice-march-20261020-00.pdf"
    },
-   "prev": "c995f4d5b60fdb0bbf6aac4f0970be12bb811d95aceb0dcccaedeb81acdcf98f",
-   "hash": "9f90d29fd3929d130006919ef8a849513e0b89dae26a42765705354d8dd6485e"
+   "prev": "912f406c806174cb1c99dc282cbd5b30a6f3a22ec5aca9ec3b22fef90e72d375",
+   "hash": "fb815706d51331fe159aab2833086320fa545c9ac37d05f6a28e22f48d65b8f3"
   },
   {
    "i": 9,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'invoice-march-20261020-12.pdf' to Documents/",
    "detail": {
@@ -295,12 +303,12 @@
     "from": "Documents/invoice-march-20261020-12.pdf",
     "to": "invoice-march-20261020-12.pdf"
    },
-   "prev": "9f90d29fd3929d130006919ef8a849513e0b89dae26a42765705354d8dd6485e",
-   "hash": "81cbbd7228ea333bdd6c5137efb09b840eb0a918867202681eb0079129452752"
+   "prev": "fb815706d51331fe159aab2833086320fa545c9ac37d05f6a28e22f48d65b8f3",
+   "hash": "d7c7176bdd4bdbbf068d019354a4b255e4edf562e027aebc1a9c2379e8651b6e"
   },
   {
    "i": 10,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'invoice-march-20261020-24.pdf' to Documents/",
    "detail": {
@@ -312,12 +320,12 @@
     "from": "Documents/invoice-march-20261020-24.pdf",
     "to": "invoice-march-20261020-24.pdf"
    },
-   "prev": "81cbbd7228ea333bdd6c5137efb09b840eb0a918867202681eb0079129452752",
-   "hash": "d29cc670b7dc30be37420f97eddf65cf4a4a557eadb533d79d24fb71d2c0187c"
+   "prev": "d7c7176bdd4bdbbf068d019354a4b255e4edf562e027aebc1a9c2379e8651b6e",
+   "hash": "b73950287d468020d8465fbe8cc171c677e7cdeb052496683346eea6362fc911"
   },
   {
    "i": 11,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'notes-20261020-06.md' to Documents/",
    "detail": {
@@ -329,12 +337,12 @@
     "from": "Documents/notes-20261020-06.md",
     "to": "notes-20261020-06.md"
    },
-   "prev": "d29cc670b7dc30be37420f97eddf65cf4a4a557eadb533d79d24fb71d2c0187c",
-   "hash": "6c58bc30dc07abeb2194dbd278b609fe7055c54e22f849a505df9fe0836ea26d"
+   "prev": "b73950287d468020d8465fbe8cc171c677e7cdeb052496683346eea6362fc911",
+   "hash": "1ec64b54673741ed48674395ed23d661ebacf112856ed0b0e0a048b23e3012b7"
   },
   {
    "i": 12,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'notes-20261020-18.md' to Documents/",
    "detail": {
@@ -346,12 +354,12 @@
     "from": "Documents/notes-20261020-18.md",
     "to": "notes-20261020-18.md"
    },
-   "prev": "6c58bc30dc07abeb2194dbd278b609fe7055c54e22f849a505df9fe0836ea26d",
-   "hash": "e4b713f15b401b4031ff4d584c73928b5cf4687db9d8487241794523dd831572"
+   "prev": "1ec64b54673741ed48674395ed23d661ebacf112856ed0b0e0a048b23e3012b7",
+   "hash": "175be86ec947db8bd6713180134b0d2cc9c19901c4a1e5696d3ee6c0b0010f12"
   },
   {
    "i": 13,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'screenshot-2026-10-19-20261020-01.png' to Images/",
    "detail": {
@@ -363,12 +371,12 @@
     "from": "Images/screenshot-2026-10-19-20261020-01.png",
     "to": "screenshot-2026-10-19-20261020-01.png"
    },
-   "prev": "e4b713f15b401b4031ff4d584c73928b5cf4687db9d8487241794523dd831572",
-   "hash": "be41dce4936c0874107d6343715621c06eff2e85e88af435c48678d8ad41c8f0"
+   "prev": "175be86ec947db8bd6713180134b0d2cc9c19901c4a1e5696d3ee6c0b0010f12",
+   "hash": "abf0c0a59e957c29bc989225ab37884f4d1722253479622a81dc0e3874a4da70"
   },
   {
    "i": 14,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'screenshot-2026-10-19-20261020-13.png' to Images/",
    "detail": {
@@ -380,12 +388,12 @@
     "from": "Images/screenshot-2026-10-19-20261020-13.png",
     "to": "screenshot-2026-10-19-20261020-13.png"
    },
-   "prev": "be41dce4936c0874107d6343715621c06eff2e85e88af435c48678d8ad41c8f0",
-   "hash": "c6203aa9114399694dd072b9403fe9b8a12f74c16f9e0021e03f88f86ac84f7d"
+   "prev": "abf0c0a59e957c29bc989225ab37884f4d1722253479622a81dc0e3874a4da70",
+   "hash": "5ebdce6077a5bd11248c6addfecad026c3d385988ac3c91814bd1cff15b83b17"
   },
   {
    "i": 15,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'screenshot-2026-10-19-20261020-25.png' to Images/",
    "detail": {
@@ -397,12 +405,12 @@
     "from": "Images/screenshot-2026-10-19-20261020-25.png",
     "to": "screenshot-2026-10-19-20261020-25.png"
    },
-   "prev": "c6203aa9114399694dd072b9403fe9b8a12f74c16f9e0021e03f88f86ac84f7d",
-   "hash": "b819bd06e89dcfbfc2687350982bdbaf94b43df33e1cdcb15cee0c13f3fe5c60"
+   "prev": "5ebdce6077a5bd11248c6addfecad026c3d385988ac3c91814bd1cff15b83b17",
+   "hash": "290a8440694892a26421610b34fb6a20ce3b3b9dd90389130849467e92693738"
   },
   {
    "i": 16,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'setup-vscode-20261020-03.deb' to Installers/",
    "detail": {
@@ -414,12 +422,12 @@
     "from": "Installers/setup-vscode-20261020-03.deb",
     "to": "setup-vscode-20261020-03.deb"
    },
-   "prev": "b819bd06e89dcfbfc2687350982bdbaf94b43df33e1cdcb15cee0c13f3fe5c60",
-   "hash": "87e7864d2321f5e671e2b18ba0dd15ea10efa929d4b5cc03443337129a066931"
+   "prev": "290a8440694892a26421610b34fb6a20ce3b3b9dd90389130849467e92693738",
+   "hash": "4fc642f35fbe9b8afbc91fd82eb501f16d68bc8c8791c26775c3056b21d360fa"
   },
   {
    "i": 17,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'setup-vscode-20261020-15.deb' to Installers/",
    "detail": {
@@ -431,12 +439,12 @@
     "from": "Installers/setup-vscode-20261020-15.deb",
     "to": "setup-vscode-20261020-15.deb"
    },
-   "prev": "87e7864d2321f5e671e2b18ba0dd15ea10efa929d4b5cc03443337129a066931",
-   "hash": "e8ad0fdfaec9d7247e151daac2cc5f6007c2a39aab40d1ce6ac0a3b9406a947d"
+   "prev": "4fc642f35fbe9b8afbc91fd82eb501f16d68bc8c8791c26775c3056b21d360fa",
+   "hash": "e8b59ce3daca7f46d3bb04b0169d06ca72ffc0763dcf2093fd6e60d26cc0697f"
   },
   {
    "i": 18,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'song-demo-20261020-10.mp3' to Media/",
    "detail": {
@@ -448,12 +456,12 @@
     "from": "Media/song-demo-20261020-10.mp3",
     "to": "song-demo-20261020-10.mp3"
    },
-   "prev": "e8ad0fdfaec9d7247e151daac2cc5f6007c2a39aab40d1ce6ac0a3b9406a947d",
-   "hash": "ace3b29f7aa26f01b98a0127b978da12722a23fc44a7f0e483d592cb5b9fc541"
+   "prev": "e8b59ce3daca7f46d3bb04b0169d06ca72ffc0763dcf2093fd6e60d26cc0697f",
+   "hash": "fc00ccc28a9ff05d0ffce38e9c7960292196e6effbfe73c39e1c50cf042bc981"
   },
   {
    "i": 19,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'song-demo-20261020-22.mp3' to Media/",
    "detail": {
@@ -465,12 +473,12 @@
     "from": "Media/song-demo-20261020-22.mp3",
     "to": "song-demo-20261020-22.mp3"
    },
-   "prev": "ace3b29f7aa26f01b98a0127b978da12722a23fc44a7f0e483d592cb5b9fc541",
-   "hash": "c27b3140574d805ac72ab8c797fee1045797dfcef05ec631501a8db1befc88a8"
+   "prev": "fc00ccc28a9ff05d0ffce38e9c7960292196e6effbfe73c39e1c50cf042bc981",
+   "hash": "5868e502659f3f552307443ab72db8ef96d75ca855954f4d945d4f03a0888774"
   },
   {
    "i": 20,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'vacation-20261020-02.jpg' to Images/",
    "detail": {
@@ -482,12 +490,12 @@
     "from": "Images/vacation-20261020-02.jpg",
     "to": "vacation-20261020-02.jpg"
    },
-   "prev": "c27b3140574d805ac72ab8c797fee1045797dfcef05ec631501a8db1befc88a8",
-   "hash": "99a813d6d2d18853bde2485580052260163f32e3948b259c744489cb832683dc"
+   "prev": "5868e502659f3f552307443ab72db8ef96d75ca855954f4d945d4f03a0888774",
+   "hash": "528f4a1129471b4077a209f5499eee7d99feced6c28221ed1343e2aba1f492dc"
   },
   {
    "i": 21,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'vacation-20261020-14.jpg' to Images/",
    "detail": {
@@ -499,12 +507,12 @@
     "from": "Images/vacation-20261020-14.jpg",
     "to": "vacation-20261020-14.jpg"
    },
-   "prev": "99a813d6d2d18853bde2485580052260163f32e3948b259c744489cb832683dc",
-   "hash": "744f6cf9eda715baf42b2543d83a5bc99f016c6edd508e3d321318a061153b38"
+   "prev": "528f4a1129471b4077a209f5499eee7d99feced6c28221ed1343e2aba1f492dc",
+   "hash": "38bb57f8b8e5505af7f3f95698ebea9c081763238122ef31fa4604a850100393"
   },
   {
    "i": 22,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'wallpaper-20261020-09.png' to Images/",
    "detail": {
@@ -516,12 +524,12 @@
     "from": "Images/wallpaper-20261020-09.png",
     "to": "wallpaper-20261020-09.png"
    },
-   "prev": "744f6cf9eda715baf42b2543d83a5bc99f016c6edd508e3d321318a061153b38",
-   "hash": "774c6ed90204ce6700ec96425af39627e3929603816e3329841897c95b0c5950"
+   "prev": "38bb57f8b8e5505af7f3f95698ebea9c081763238122ef31fa4604a850100393",
+   "hash": "a0032a4a8f9ad7536b67528394fe7b07eeed38750fb95159da241f0ec74f54f1"
   },
   {
    "i": 23,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'wallpaper-20261020-21.png' to Images/",
    "detail": {
@@ -533,12 +541,12 @@
     "from": "Images/wallpaper-20261020-21.png",
     "to": "wallpaper-20261020-21.png"
    },
-   "prev": "774c6ed90204ce6700ec96425af39627e3929603816e3329841897c95b0c5950",
-   "hash": "bf37d5d234dacfae2c6aaab0f487246fdfc40cd9aaf0ab249d289a43b852aa90"
+   "prev": "a0032a4a8f9ad7536b67528394fe7b07eeed38750fb95159da241f0ec74f54f1",
+   "hash": "69ce07774aa1947fdb0d894cd133234894a5a00829961d3f3de6d5e1221ab106"
   },
   {
    "i": 24,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'widget-20261020-08.py' to Code/",
    "detail": {
@@ -550,12 +558,12 @@
     "from": "Code/widget-20261020-08.py",
     "to": "widget-20261020-08.py"
    },
-   "prev": "bf37d5d234dacfae2c6aaab0f487246fdfc40cd9aaf0ab249d289a43b852aa90",
-   "hash": "38408bc105c48e97b85407575cba0a54d86a4f13431cbea43c1d4d539915e0bb"
+   "prev": "69ce07774aa1947fdb0d894cd133234894a5a00829961d3f3de6d5e1221ab106",
+   "hash": "1bfa0127f8b4b7746adbaf1bbb593d4e53ca83108a568506a844eb535518f42b"
   },
   {
    "i": 25,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "moved 'widget-20261020-20.py' to Code/",
    "detail": {
@@ -567,12 +575,12 @@
     "from": "Code/widget-20261020-20.py",
     "to": "widget-20261020-20.py"
    },
-   "prev": "38408bc105c48e97b85407575cba0a54d86a4f13431cbea43c1d4d539915e0bb",
-   "hash": "9ce3ca439d35686ac7dadef2ccd9c05c6393552d47f9b65fb1816c6825371a9f"
+   "prev": "1bfa0127f8b4b7746adbaf1bbb593d4e53ca83108a568506a844eb535518f42b",
+   "hash": "ba45535bdac96988f140da580daa9a567b5adacbc86fe2eb14638571251057d0"
   },
   {
    "i": 26,
-   "ts": "2026-10-20T18:16:07Z",
+   "ts": "2026-10-20T18:25:04Z",
    "tool": "tidy",
    "action": "tidied 26 files into 7 buckets",
    "detail": {
@@ -591,38 +599,40 @@
     "skipped_over_limit": 0
    },
    "revert": null,
-   "prev": "9ce3ca439d35686ac7dadef2ccd9c05c6393552d47f9b65fb1816c6825371a9f",
-   "hash": "1b6945a01fca81e32f5eb348a6453d94031b3193cf3e25fae426608f6bf9a982"
+   "prev": "ba45535bdac96988f140da580daa9a567b5adacbc86fe2eb14638571251057d0",
+   "hash": "fd957166d37733593a9e36d7c8784771385635c8045bb2864eade06aca406f0d"
   },
   {
    "i": 27,
-   "ts": "2026-10-20T18:16:59Z",
+   "ts": "2026-10-20T18:25:57Z",
    "tool": "inbox",
-   "action": "triaged 60 mails: 3 newsletters, 2 human, 42 notifications",
+   "action": "triaged 60 mails: 5 newsletters, 0 human, 39 notifications",
    "detail": {
     "scanned": 60,
-    "newsletters": 3,
-    "human": 2,
-    "notify": 42,
-    "deterministic_notifications": 35,
-    "ambiguous_for_brain": 20,
+    "newsletters": 5,
+    "human": 0,
+    "notify": 39,
+    "deterministic_notifications": 36,
+    "ambiguous_for_brain": 19,
     "brain_classified": 14,
-    "unsub_links": 3,
+    "unsub_links": 5,
     "labeled": 0,
     "privacy": "envelope headers only; personal subjects never leave the machine",
     "domains": [
-     "m.weworkremotely.com",
+     "centeia.com",
+     "google.com",
      "medium.com",
-     "quora.com"
+     "ollama.com",
+     "tutellus.com"
     ]
    },
    "revert": null,
-   "prev": "1b6945a01fca81e32f5eb348a6453d94031b3193cf3e25fae426608f6bf9a982",
-   "hash": "ceb6bc72a8b98c1ae4e7629f4c1604f5c3d5a50e3a4cd22dc2c39c2683ae7a79"
+   "prev": "fd957166d37733593a9e36d7c8784771385635c8045bb2864eade06aca406f0d",
+   "hash": "0d531c4bb41edde787e685cadb161043cd6856db51d48bb9695e919d17d5a1d3"
   },
   {
    "i": 28,
-   "ts": "2026-10-20T18:17:41Z",
+   "ts": "2026-10-20T18:26:39Z",
    "tool": "brief",
    "action": "morning brief ready: 10 HN stories, summarised by local Gemma",
    "detail": {
@@ -631,49 +641,61 @@
     "titles": [
      "Voxtral 3",
      "DeepInfer: High-performance inference framework for DeepSeek models",
-     "EMudhra Intermediate CA Compromise",
      "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
+     "EMudhra Intermediate CA Compromise",
      "Apple broke an essential presentation feature of iPads",
+     "Ofcom concedes defeat in 4chan case",
      "Publish fake stats, get cited in LLMs",
      "Facebook Pages require paid subscription to post more than two links per month",
      "How I got over 300 Tor exit nodes removed",
-     "Triplet of 'ghostly' galaxies hints at what dark matter is and isn't",
-     "JAXA is about to perform a Phobos sample return mission"
+     "Tsrs: A Port of TypeScript to Rust"
     ]
    },
    "revert": null,
-   "prev": "ceb6bc72a8b98c1ae4e7629f4c1604f5c3d5a50e3a4cd22dc2c39c2683ae7a79",
-   "hash": "1921df6fdaa8e7eaa9c5bd82f19c193f58fa8349e83b75d96ca06a4ce113364a"
+   "prev": "0d531c4bb41edde787e685cadb161043cd6856db51d48bb9695e919d17d5a1d3",
+   "hash": "15b976d609d326f299f47ad786e4178105647da178210f298d1e9549ec9af397"
   }
  ],
  "declined": [
   {
    "tool": "inbox",
    "action": "click unsubscribe link",
-   "reason": "irreversible; link harvested for quora.com (open it yourself from the original mail's List-Unsubscribe header: https://www.quora.com/email_optout/…)",
-   "ts": "2026-10-20T18:16:58Z"
+   "reason": "irreversible; link harvested for google.com (open it yourself from the original mail's List-Unsubscribe header: https://myaccount.google.com/communication-preferences/…)",
+   "ts": "2026-10-20T18:25:56Z"
+  },
+  {
+   "tool": "inbox",
+   "action": "click unsubscribe link",
+   "reason": "irreversible; link harvested for tutellus.com (open it yourself from the original mail's List-Unsubscribe header: https://preview.tutellus.com/box.php/…)",
+   "ts": "2026-10-20T18:25:56Z"
+  },
+  {
+   "tool": "inbox",
+   "action": "click unsubscribe link",
+   "reason": "irreversible; link harvested for centeia.com (open it yourself from the original mail's List-Unsubscribe header: https://u56052386.ct.sendgrid.net/u/…)",
+   "ts": "2026-10-20T18:25:56Z"
+  },
+  {
+   "tool": "inbox",
+   "action": "click unsubscribe link",
+   "reason": "irreversible; link harvested for ollama.com (open it yourself from the original mail's List-Unsubscribe header: https://app.loops.so/unsubscribe/…)",
+   "ts": "2026-10-20T18:25:56Z"
   },
   {
    "tool": "inbox",
    "action": "click unsubscribe link",
    "reason": "irreversible; link harvested for medium.com (open it yourself from the original mail's List-Unsubscribe header: https://medium.com/me/…)",
-   "ts": "2026-10-20T18:16:58Z"
-  },
-  {
-   "tool": "inbox",
-   "action": "click unsubscribe link",
-   "reason": "irreversible; link harvested for m.weworkremotely.com (open it yourself from the original mail's List-Unsubscribe header: https://email.m.weworkremotely.com/unsubscribe/…)",
-   "ts": "2026-10-20T18:16:58Z"
+   "ts": "2026-10-20T18:25:56Z"
   }
  ],
  "signature": {
   "scheme": "SLOTH-RECEIPT-1",
   "date": "2026-10-20",
-  "head": "1921df6fdaa8e7eaa9c5bd82f19c193f58fa8349e83b75d96ca06a4ce113364a",
+  "head": "15b976d609d326f299f47ad786e4178105647da178210f298d1e9549ec9af397",
   "entries": 29,
-  "declined": 3,
-  "signed_at": "2026-10-20T18:17:41Z",
-  "signature": "3596a4a6b11b0ec187c7662a7bc470cd0c95e4f8b38b664190e69a873d1de713d190f0a5676ebbe886492e0895a21d60669d233ac9a50b276f3308d4aa9d8b07",
+  "declined": 5,
+  "signed_at": "2026-10-20T18:26:39Z",
+  "signature": "a3f105bf2979108db8685c2c46cdea6c36cf639866ec4a84602111eebc911981585d2c6415148642f2f3abee3e0ed031fa01f6cd083e85c27d11e2c1e72a830e",
   "public_key": "e1043b6e6105f2683b602d92d0f3e52d1e30004e5aca71db5ddf33c5497493c0"
  }
 }

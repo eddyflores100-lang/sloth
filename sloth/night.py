@@ -98,7 +98,8 @@ def main(argv: list[str] | None = None) -> None:
     rr.add_argument("chore", choices=["tidy", "inbox", "brief"])
     rr.add_argument("--dir", default=DEFAULT_DIR)
 
-    sub.add_parser("verify", help="verify a receipt (default: latest)")
+    vr = sub.add_parser("verify", help="verify a receipt (default: latest)")
+    vr.add_argument("path", nargs="?", help="receipt file to verify")
     sub.add_parser("undo", help="undo the last tidy pass in --dir")
     p.add_argument("--dir", default=DEFAULT_DIR)
 
@@ -119,9 +120,8 @@ def main(argv: list[str] | None = None) -> None:
         ledger.to_file(rpath, KEY_PATH)
         print("receipt:", rpath)
     elif args.cmd == "verify":
-        from .report import latest_receipt
         from .receipts import verify as vfy
-        path = latest_receipt()
+        path = args.path or __import__("sloth.report", fromlist=["latest_receipt"]).latest_receipt()
         ok, problems = vfy(path) if path else (False, ["no receipts yet"])
         print(f"{path}: {'VERIFIED' if ok else 'FAILED'}")
         for prob in problems:
