@@ -137,8 +137,12 @@ because an agent you can't read is an agent you can't trust.
 
 ## The breakfast dashboard
 
-A live signed receipt (chain verification happens server-side on every
-`/verify` hit): **https://sloth.utalabs.tech**
+**Live: https://sloth.marketnow.site** — the Worker re-verifies the whole
+chain with its own Ed25519/WebCrypto implementation on every `/verify` hit.
+Cross-implementation agreement (Python wrote it, JavaScript checked it)
+is worth more than either implementation trusting itself.
+
+(The project's permanent home will be a `.tech` domain — `sloth.utalabs.tech`.)
 
 ## Crediting prior work
 
