@@ -37,6 +37,17 @@ def _domain(addr: str) -> str:
     return email_addr.split("@")[-1].lower() if "@" in email_addr else "unknown"
 
 
+def _redact(link: str) -> str:
+    """Strip tokens: show origin + first path segment only.
+
+    Unsubscribe URLs embed per-user tokens (e.g. GitHub's
+    /unsubscribe-auth/<token>); a receipt is a publishable artifact, so
+    it must never contain a working one-click opt-out for strangers.
+    """
+    m = re.match(r"^(https?://[^/]+/[^/?#]*)", link)
+    return (m.group(1) + "/\u2026") if m else (link.split("?")[0] + "/\u2026")
+
+
 def _list_unsub(msg: email.message.Message) -> str | None:
     raw = msg.get("List-Unsubscribe", "") or ""
     if not raw:
@@ -139,7 +150,8 @@ def triage(ledger, server: str = "imap.gmail.com", since_days: int = 21,
                     ledger.decline(
                         "inbox", "click unsubscribe link",
                         f"irreversible; link harvested for {dom} "
-                        f"(open it yourself: {link[:120]})")
+                        f"(open it yourself from the original mail's "
+                        f"List-Unsubscribe header: {_redact(link)})")
                     result["newsletters"].append({"domain": dom, "uid": uid})
                 else:
                     result["skipped_no_unsub"] = result.get("skipped_no_unsub", 0) + 1

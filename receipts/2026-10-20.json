@@ -8,8 +8,16 @@
    "tidy": {
     "dir": "/tmp/demo-downloads",
     "dry_run": false,
-    "moved": 0,
-    "by_bucket": {},
+    "moved": 26,
+    "by_bucket": {
+     "Archives": 2,
+     "Media": 4,
+     "Documents": 7,
+     "Spreadsheets": 2,
+     "Images": 7,
+     "Installers": 2,
+     "Code": 2
+    },
     "skipped_over_limit": 0
    },
    "inbox": {
@@ -17,44 +25,28 @@
     "newsletters": [
      {
       "domain": "quora.com",
-      "uid": "22200"
-     },
-     {
-      "domain": "ollama.com",
-      "uid": "22215"
+      "uid": "22197"
      },
      {
       "domain": "medium.com",
       "uid": "22219"
      },
      {
-      "domain": "deeperlearning.producthunt.com",
-      "uid": "22228"
-     },
-     {
-      "domain": "gohighlevel.com",
-      "uid": "22231"
-     },
-     {
-      "domain": "email.self.inc",
-      "uid": "22233"
-     },
-     {
       "domain": "m.weworkremotely.com",
       "uid": "22234"
      }
     ],
-    "human": 1,
+    "human": 2,
     "notify": 42,
     "unclassified": 0,
     "labeled": 0,
-    "unsub_links": 7,
+    "unsub_links": 3,
     "brain": "gemma-3-1b-it (local, llama.cpp)",
-    "deterministic_notifications": 37,
+    "deterministic_notifications": 35,
     "ambiguous": 20,
-    "brain_classified": 17,
+    "brain_classified": 14,
     "brain_used": true,
-    "skipped_no_unsub": 4
+    "skipped_no_unsub": 2
    },
    "brief": {
     "stories": 10,
@@ -63,58 +55,65 @@
      {
       "title": "Voxtral 3",
       "url": "https://mistral.ai/news/voxtral-3/",
-      "points": 217,
-      "comments": 55,
+      "points": 233,
+      "comments": 58,
       "gist": "Voxtral 3 is a new device."
      },
      {
-      "title": "DeepInfer: High-performance, large-scale inference framework for DeepSeek models",
+      "title": "DeepInfer: High-performance inference framework for DeepSeek models",
       "url": "https://github.com/deepseek-ai/DeepInfer",
-      "points": 1888,
-      "comments": 720,
-      "gist": "DeepSeek models require a powerful inference framework for detailed analysis."
+      "points": 1894,
+      "comments": 722,
+      "gist": "DeepSeek models require a high-performance inference framework."
      },
      {
       "title": "EMudhra Intermediate CA Compromise",
       "url": "https://emudhra.we-have-a-problem.com/",
-      "points": 277,
-      "comments": 133,
-      "gist": "The EMudhra Intermediate CA agreement was reached."
+      "points": 289,
+      "comments": 142,
+      "gist": "The EMudhra Intermediate CA agreement is a compromise."
      },
      {
       "title": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
       "url": "https://github.com/google-pytorch/torch_tpu",
-      "points": 62,
-      "comments": 19,
+      "points": 70,
+      "comments": 20,
       "gist": "Google has made TorchTPU available to the public, a native PyTorch backend for TPUs."
      },
      {
       "title": "Apple broke an essential presentation feature of iPads",
       "url": "https://teddysvoronos.com/2026-10-19-apple-broke-an-essential-presentation-feature-of-ipads/",
-      "points": 324,
-      "comments": 176,
+      "points": 325,
+      "comments": 178,
       "gist": "Apple has discontinued a key presentation feature on iPads."
      },
      {
       "title": "Publish fake stats, get cited in LLMs",
       "url": "https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web",
-      "points": 229,
-      "comments": 119,
+      "points": 232,
+      "comments": 122,
       "gist": "Do not publish false data, as it may be used to influence LLMs."
+     },
+     {
+      "title": "Facebook Pages require paid subscription to post more than two links per month",
+      "url": "https://mastodon.gamedev.place/@AshleyGullen/117473851565913919",
+      "points": 324,
+      "comments": 269,
+      "gist": "Facebook requires a paid subscription for pages to post more than two links per month."
+     },
+     {
+      "title": "How I got over 300 Tor exit nodes removed",
+      "url": "https://kaba.cx/posts/20261020_Tor/",
+      "points": 193,
+      "comments": 52,
+      "gist": "I removed 300 Tor exit nodes during overnight maintenance."
      },
      {
       "title": "Triplet of 'ghostly' galaxies hints at what dark matter is and isn't",
       "url": "https://www.quantamagazine.org/triplet-of-ghostly-galaxies-hints-at-what-dark-matter-is-and-isnt-20261014/",
       "points": 62,
-      "comments": 12,
+      "comments": 13,
       "gist": "The headline describes a potential clue about dark matter’s nature."
-     },
-     {
-      "title": "How I got over 300 Tor exit nodes removed",
-      "url": "https://kaba.cx/posts/20261020_Tor/",
-      "points": 190,
-      "comments": 52,
-      "gist": "I removed 300 Tor exit nodes during overnight maintenance."
      },
      {
       "title": "JAXA is about to perform a Phobos sample return mission",
@@ -122,13 +121,6 @@
       "points": 34,
       "comments": 4,
       "gist": "JAXA will send a spacecraft to study Phobos, a moon of Mars."
-     },
-     {
-      "title": "My Friend Bob Cringely",
-      "url": "https://tyma.com/my-cringe-story/",
-      "points": 104,
-      "comments": 33,
-      "gist": "Bob Cringely is a noted inventor.\n\nBob Cringely is an inventor."
      }
     ]
    }
@@ -138,53 +130,499 @@
  "entries": [
   {
    "i": 0,
-   "ts": "2026-10-20T18:09:47Z",
+   "ts": "2026-10-20T18:16:07Z",
    "tool": "tidy",
-   "action": "tidied 0 files into 0 buckets",
+   "action": "moved 'backup.tar-20261020-07.gz' to Archives/",
    "detail": {
-    "dir": "/tmp/demo-downloads",
-    "dry_run": false,
-    "moved": 0,
-    "by_bucket": {},
-    "skipped_over_limit": 0
+    "file": "backup.tar-20261020-07.gz",
+    "bucket": "Archives"
    },
-   "revert": null,
+   "revert": {
+    "file": "backup.tar-20261020-07.gz",
+    "from": "Archives/backup.tar-20261020-07.gz",
+    "to": "backup.tar-20261020-07.gz"
+   },
    "prev": "0000000000000000000000000000000000000000000000000000000000000000",
-   "hash": "ab4b8a5b3fbae7c987fced978bf298e9ec456571cd242ef4940e49740c355f79"
+   "hash": "3e7f483bb57ab742f4f07646c673e18056ea16ecc2e569c4cdc18a8a2959a994"
   },
   {
    "i": 1,
-   "ts": "2026-10-20T18:11:23Z",
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'backup.tar-20261020-19.gz' to Archives/",
+   "detail": {
+    "file": "backup.tar-20261020-19.gz",
+    "bucket": "Archives"
+   },
+   "revert": {
+    "file": "backup.tar-20261020-19.gz",
+    "from": "Archives/backup.tar-20261020-19.gz",
+    "to": "backup.tar-20261020-19.gz"
+   },
+   "prev": "3e7f483bb57ab742f4f07646c673e18056ea16ecc2e569c4cdc18a8a2959a994",
+   "hash": "539fb732e11134a023eff3562866c20d68c7dd395db4abb4733bb1cb222815bb"
+  },
+  {
+   "i": 2,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'cat-video-20261020-05.mp4' to Media/",
+   "detail": {
+    "file": "cat-video-20261020-05.mp4",
+    "bucket": "Media"
+   },
+   "revert": {
+    "file": "cat-video-20261020-05.mp4",
+    "from": "Media/cat-video-20261020-05.mp4",
+    "to": "cat-video-20261020-05.mp4"
+   },
+   "prev": "539fb732e11134a023eff3562866c20d68c7dd395db4abb4733bb1cb222815bb",
+   "hash": "1a59c1d2bce74a264b31822e12ba94ce2ecd97feb726dbafdd78bf5ab8f50cfc"
+  },
+  {
+   "i": 3,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'cat-video-20261020-17.mp4' to Media/",
+   "detail": {
+    "file": "cat-video-20261020-17.mp4",
+    "bucket": "Media"
+   },
+   "revert": {
+    "file": "cat-video-20261020-17.mp4",
+    "from": "Media/cat-video-20261020-17.mp4",
+    "to": "cat-video-20261020-17.mp4"
+   },
+   "prev": "1a59c1d2bce74a264b31822e12ba94ce2ecd97feb726dbafdd78bf5ab8f50cfc",
+   "hash": "7e75639767abb31ea0132157a83f2dc9283a983ecba3c344328421964d130dc0"
+  },
+  {
+   "i": 4,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'contract-v2-20261020-11.docx' to Documents/",
+   "detail": {
+    "file": "contract-v2-20261020-11.docx",
+    "bucket": "Documents"
+   },
+   "revert": {
+    "file": "contract-v2-20261020-11.docx",
+    "from": "Documents/contract-v2-20261020-11.docx",
+    "to": "contract-v2-20261020-11.docx"
+   },
+   "prev": "7e75639767abb31ea0132157a83f2dc9283a983ecba3c344328421964d130dc0",
+   "hash": "05873af9343306ca55d6fee59737c5c15b2012b8db6f2d33eff6c935c58f7409"
+  },
+  {
+   "i": 5,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'contract-v2-20261020-23.docx' to Documents/",
+   "detail": {
+    "file": "contract-v2-20261020-23.docx",
+    "bucket": "Documents"
+   },
+   "revert": {
+    "file": "contract-v2-20261020-23.docx",
+    "from": "Documents/contract-v2-20261020-23.docx",
+    "to": "contract-v2-20261020-23.docx"
+   },
+   "prev": "05873af9343306ca55d6fee59737c5c15b2012b8db6f2d33eff6c935c58f7409",
+   "hash": "4dfc24569486194085b3c8ebce4acef5882af93d16dcfb09792d6bbda87ba6c4"
+  },
+  {
+   "i": 6,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'data-export-20261020-04.csv' to Spreadsheets/",
+   "detail": {
+    "file": "data-export-20261020-04.csv",
+    "bucket": "Spreadsheets"
+   },
+   "revert": {
+    "file": "data-export-20261020-04.csv",
+    "from": "Spreadsheets/data-export-20261020-04.csv",
+    "to": "data-export-20261020-04.csv"
+   },
+   "prev": "4dfc24569486194085b3c8ebce4acef5882af93d16dcfb09792d6bbda87ba6c4",
+   "hash": "bdfa60d306cded07020344cb7888b5c6a06cce7883a488a90dd8b71558ddfea5"
+  },
+  {
+   "i": 7,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'data-export-20261020-16.csv' to Spreadsheets/",
+   "detail": {
+    "file": "data-export-20261020-16.csv",
+    "bucket": "Spreadsheets"
+   },
+   "revert": {
+    "file": "data-export-20261020-16.csv",
+    "from": "Spreadsheets/data-export-20261020-16.csv",
+    "to": "data-export-20261020-16.csv"
+   },
+   "prev": "bdfa60d306cded07020344cb7888b5c6a06cce7883a488a90dd8b71558ddfea5",
+   "hash": "c995f4d5b60fdb0bbf6aac4f0970be12bb811d95aceb0dcccaedeb81acdcf98f"
+  },
+  {
+   "i": 8,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'invoice-march-20261020-00.pdf' to Documents/",
+   "detail": {
+    "file": "invoice-march-20261020-00.pdf",
+    "bucket": "Documents"
+   },
+   "revert": {
+    "file": "invoice-march-20261020-00.pdf",
+    "from": "Documents/invoice-march-20261020-00.pdf",
+    "to": "invoice-march-20261020-00.pdf"
+   },
+   "prev": "c995f4d5b60fdb0bbf6aac4f0970be12bb811d95aceb0dcccaedeb81acdcf98f",
+   "hash": "9f90d29fd3929d130006919ef8a849513e0b89dae26a42765705354d8dd6485e"
+  },
+  {
+   "i": 9,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'invoice-march-20261020-12.pdf' to Documents/",
+   "detail": {
+    "file": "invoice-march-20261020-12.pdf",
+    "bucket": "Documents"
+   },
+   "revert": {
+    "file": "invoice-march-20261020-12.pdf",
+    "from": "Documents/invoice-march-20261020-12.pdf",
+    "to": "invoice-march-20261020-12.pdf"
+   },
+   "prev": "9f90d29fd3929d130006919ef8a849513e0b89dae26a42765705354d8dd6485e",
+   "hash": "81cbbd7228ea333bdd6c5137efb09b840eb0a918867202681eb0079129452752"
+  },
+  {
+   "i": 10,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'invoice-march-20261020-24.pdf' to Documents/",
+   "detail": {
+    "file": "invoice-march-20261020-24.pdf",
+    "bucket": "Documents"
+   },
+   "revert": {
+    "file": "invoice-march-20261020-24.pdf",
+    "from": "Documents/invoice-march-20261020-24.pdf",
+    "to": "invoice-march-20261020-24.pdf"
+   },
+   "prev": "81cbbd7228ea333bdd6c5137efb09b840eb0a918867202681eb0079129452752",
+   "hash": "d29cc670b7dc30be37420f97eddf65cf4a4a557eadb533d79d24fb71d2c0187c"
+  },
+  {
+   "i": 11,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'notes-20261020-06.md' to Documents/",
+   "detail": {
+    "file": "notes-20261020-06.md",
+    "bucket": "Documents"
+   },
+   "revert": {
+    "file": "notes-20261020-06.md",
+    "from": "Documents/notes-20261020-06.md",
+    "to": "notes-20261020-06.md"
+   },
+   "prev": "d29cc670b7dc30be37420f97eddf65cf4a4a557eadb533d79d24fb71d2c0187c",
+   "hash": "6c58bc30dc07abeb2194dbd278b609fe7055c54e22f849a505df9fe0836ea26d"
+  },
+  {
+   "i": 12,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'notes-20261020-18.md' to Documents/",
+   "detail": {
+    "file": "notes-20261020-18.md",
+    "bucket": "Documents"
+   },
+   "revert": {
+    "file": "notes-20261020-18.md",
+    "from": "Documents/notes-20261020-18.md",
+    "to": "notes-20261020-18.md"
+   },
+   "prev": "6c58bc30dc07abeb2194dbd278b609fe7055c54e22f849a505df9fe0836ea26d",
+   "hash": "e4b713f15b401b4031ff4d584c73928b5cf4687db9d8487241794523dd831572"
+  },
+  {
+   "i": 13,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'screenshot-2026-10-19-20261020-01.png' to Images/",
+   "detail": {
+    "file": "screenshot-2026-10-19-20261020-01.png",
+    "bucket": "Images"
+   },
+   "revert": {
+    "file": "screenshot-2026-10-19-20261020-01.png",
+    "from": "Images/screenshot-2026-10-19-20261020-01.png",
+    "to": "screenshot-2026-10-19-20261020-01.png"
+   },
+   "prev": "e4b713f15b401b4031ff4d584c73928b5cf4687db9d8487241794523dd831572",
+   "hash": "be41dce4936c0874107d6343715621c06eff2e85e88af435c48678d8ad41c8f0"
+  },
+  {
+   "i": 14,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'screenshot-2026-10-19-20261020-13.png' to Images/",
+   "detail": {
+    "file": "screenshot-2026-10-19-20261020-13.png",
+    "bucket": "Images"
+   },
+   "revert": {
+    "file": "screenshot-2026-10-19-20261020-13.png",
+    "from": "Images/screenshot-2026-10-19-20261020-13.png",
+    "to": "screenshot-2026-10-19-20261020-13.png"
+   },
+   "prev": "be41dce4936c0874107d6343715621c06eff2e85e88af435c48678d8ad41c8f0",
+   "hash": "c6203aa9114399694dd072b9403fe9b8a12f74c16f9e0021e03f88f86ac84f7d"
+  },
+  {
+   "i": 15,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'screenshot-2026-10-19-20261020-25.png' to Images/",
+   "detail": {
+    "file": "screenshot-2026-10-19-20261020-25.png",
+    "bucket": "Images"
+   },
+   "revert": {
+    "file": "screenshot-2026-10-19-20261020-25.png",
+    "from": "Images/screenshot-2026-10-19-20261020-25.png",
+    "to": "screenshot-2026-10-19-20261020-25.png"
+   },
+   "prev": "c6203aa9114399694dd072b9403fe9b8a12f74c16f9e0021e03f88f86ac84f7d",
+   "hash": "b819bd06e89dcfbfc2687350982bdbaf94b43df33e1cdcb15cee0c13f3fe5c60"
+  },
+  {
+   "i": 16,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'setup-vscode-20261020-03.deb' to Installers/",
+   "detail": {
+    "file": "setup-vscode-20261020-03.deb",
+    "bucket": "Installers"
+   },
+   "revert": {
+    "file": "setup-vscode-20261020-03.deb",
+    "from": "Installers/setup-vscode-20261020-03.deb",
+    "to": "setup-vscode-20261020-03.deb"
+   },
+   "prev": "b819bd06e89dcfbfc2687350982bdbaf94b43df33e1cdcb15cee0c13f3fe5c60",
+   "hash": "87e7864d2321f5e671e2b18ba0dd15ea10efa929d4b5cc03443337129a066931"
+  },
+  {
+   "i": 17,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'setup-vscode-20261020-15.deb' to Installers/",
+   "detail": {
+    "file": "setup-vscode-20261020-15.deb",
+    "bucket": "Installers"
+   },
+   "revert": {
+    "file": "setup-vscode-20261020-15.deb",
+    "from": "Installers/setup-vscode-20261020-15.deb",
+    "to": "setup-vscode-20261020-15.deb"
+   },
+   "prev": "87e7864d2321f5e671e2b18ba0dd15ea10efa929d4b5cc03443337129a066931",
+   "hash": "e8ad0fdfaec9d7247e151daac2cc5f6007c2a39aab40d1ce6ac0a3b9406a947d"
+  },
+  {
+   "i": 18,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'song-demo-20261020-10.mp3' to Media/",
+   "detail": {
+    "file": "song-demo-20261020-10.mp3",
+    "bucket": "Media"
+   },
+   "revert": {
+    "file": "song-demo-20261020-10.mp3",
+    "from": "Media/song-demo-20261020-10.mp3",
+    "to": "song-demo-20261020-10.mp3"
+   },
+   "prev": "e8ad0fdfaec9d7247e151daac2cc5f6007c2a39aab40d1ce6ac0a3b9406a947d",
+   "hash": "ace3b29f7aa26f01b98a0127b978da12722a23fc44a7f0e483d592cb5b9fc541"
+  },
+  {
+   "i": 19,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'song-demo-20261020-22.mp3' to Media/",
+   "detail": {
+    "file": "song-demo-20261020-22.mp3",
+    "bucket": "Media"
+   },
+   "revert": {
+    "file": "song-demo-20261020-22.mp3",
+    "from": "Media/song-demo-20261020-22.mp3",
+    "to": "song-demo-20261020-22.mp3"
+   },
+   "prev": "ace3b29f7aa26f01b98a0127b978da12722a23fc44a7f0e483d592cb5b9fc541",
+   "hash": "c27b3140574d805ac72ab8c797fee1045797dfcef05ec631501a8db1befc88a8"
+  },
+  {
+   "i": 20,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'vacation-20261020-02.jpg' to Images/",
+   "detail": {
+    "file": "vacation-20261020-02.jpg",
+    "bucket": "Images"
+   },
+   "revert": {
+    "file": "vacation-20261020-02.jpg",
+    "from": "Images/vacation-20261020-02.jpg",
+    "to": "vacation-20261020-02.jpg"
+   },
+   "prev": "c27b3140574d805ac72ab8c797fee1045797dfcef05ec631501a8db1befc88a8",
+   "hash": "99a813d6d2d18853bde2485580052260163f32e3948b259c744489cb832683dc"
+  },
+  {
+   "i": 21,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'vacation-20261020-14.jpg' to Images/",
+   "detail": {
+    "file": "vacation-20261020-14.jpg",
+    "bucket": "Images"
+   },
+   "revert": {
+    "file": "vacation-20261020-14.jpg",
+    "from": "Images/vacation-20261020-14.jpg",
+    "to": "vacation-20261020-14.jpg"
+   },
+   "prev": "99a813d6d2d18853bde2485580052260163f32e3948b259c744489cb832683dc",
+   "hash": "744f6cf9eda715baf42b2543d83a5bc99f016c6edd508e3d321318a061153b38"
+  },
+  {
+   "i": 22,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'wallpaper-20261020-09.png' to Images/",
+   "detail": {
+    "file": "wallpaper-20261020-09.png",
+    "bucket": "Images"
+   },
+   "revert": {
+    "file": "wallpaper-20261020-09.png",
+    "from": "Images/wallpaper-20261020-09.png",
+    "to": "wallpaper-20261020-09.png"
+   },
+   "prev": "744f6cf9eda715baf42b2543d83a5bc99f016c6edd508e3d321318a061153b38",
+   "hash": "774c6ed90204ce6700ec96425af39627e3929603816e3329841897c95b0c5950"
+  },
+  {
+   "i": 23,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'wallpaper-20261020-21.png' to Images/",
+   "detail": {
+    "file": "wallpaper-20261020-21.png",
+    "bucket": "Images"
+   },
+   "revert": {
+    "file": "wallpaper-20261020-21.png",
+    "from": "Images/wallpaper-20261020-21.png",
+    "to": "wallpaper-20261020-21.png"
+   },
+   "prev": "774c6ed90204ce6700ec96425af39627e3929603816e3329841897c95b0c5950",
+   "hash": "bf37d5d234dacfae2c6aaab0f487246fdfc40cd9aaf0ab249d289a43b852aa90"
+  },
+  {
+   "i": 24,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'widget-20261020-08.py' to Code/",
+   "detail": {
+    "file": "widget-20261020-08.py",
+    "bucket": "Code"
+   },
+   "revert": {
+    "file": "widget-20261020-08.py",
+    "from": "Code/widget-20261020-08.py",
+    "to": "widget-20261020-08.py"
+   },
+   "prev": "bf37d5d234dacfae2c6aaab0f487246fdfc40cd9aaf0ab249d289a43b852aa90",
+   "hash": "38408bc105c48e97b85407575cba0a54d86a4f13431cbea43c1d4d539915e0bb"
+  },
+  {
+   "i": 25,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "moved 'widget-20261020-20.py' to Code/",
+   "detail": {
+    "file": "widget-20261020-20.py",
+    "bucket": "Code"
+   },
+   "revert": {
+    "file": "widget-20261020-20.py",
+    "from": "Code/widget-20261020-20.py",
+    "to": "widget-20261020-20.py"
+   },
+   "prev": "38408bc105c48e97b85407575cba0a54d86a4f13431cbea43c1d4d539915e0bb",
+   "hash": "9ce3ca439d35686ac7dadef2ccd9c05c6393552d47f9b65fb1816c6825371a9f"
+  },
+  {
+   "i": 26,
+   "ts": "2026-10-20T18:16:07Z",
+   "tool": "tidy",
+   "action": "tidied 26 files into 7 buckets",
+   "detail": {
+    "dir": "/tmp/demo-downloads",
+    "dry_run": false,
+    "moved": 26,
+    "by_bucket": {
+     "Archives": 2,
+     "Media": 4,
+     "Documents": 7,
+     "Spreadsheets": 2,
+     "Images": 7,
+     "Installers": 2,
+     "Code": 2
+    },
+    "skipped_over_limit": 0
+   },
+   "revert": null,
+   "prev": "9ce3ca439d35686ac7dadef2ccd9c05c6393552d47f9b65fb1816c6825371a9f",
+   "hash": "1b6945a01fca81e32f5eb348a6453d94031b3193cf3e25fae426608f6bf9a982"
+  },
+  {
+   "i": 27,
+   "ts": "2026-10-20T18:16:59Z",
    "tool": "inbox",
-   "action": "triaged 60 mails: 7 newsletters, 1 human, 42 notifications",
+   "action": "triaged 60 mails: 3 newsletters, 2 human, 42 notifications",
    "detail": {
     "scanned": 60,
-    "newsletters": 7,
-    "human": 1,
+    "newsletters": 3,
+    "human": 2,
     "notify": 42,
-    "deterministic_notifications": 37,
+    "deterministic_notifications": 35,
     "ambiguous_for_brain": 20,
-    "brain_classified": 17,
-    "unsub_links": 7,
+    "brain_classified": 14,
+    "unsub_links": 3,
     "labeled": 0,
     "privacy": "envelope headers only; personal subjects never leave the machine",
     "domains": [
-     "deeperlearning.producthunt.com",
-     "email.self.inc",
-     "gohighlevel.com",
      "m.weworkremotely.com",
      "medium.com",
-     "ollama.com",
      "quora.com"
     ]
    },
    "revert": null,
-   "prev": "ab4b8a5b3fbae7c987fced978bf298e9ec456571cd242ef4940e49740c355f79",
-   "hash": "8d2c3289f978287e56cd6c5b3b83defea4acfd6cfe6ad40e7e0987e5c5cff7c4"
+   "prev": "1b6945a01fca81e32f5eb348a6453d94031b3193cf3e25fae426608f6bf9a982",
+   "hash": "ceb6bc72a8b98c1ae4e7629f4c1604f5c3d5a50e3a4cd22dc2c39c2683ae7a79"
   },
   {
-   "i": 2,
-   "ts": "2026-10-20T18:12:07Z",
+   "i": 28,
+   "ts": "2026-10-20T18:17:41Z",
    "tool": "brief",
    "action": "morning brief ready: 10 HN stories, summarised by local Gemma",
    "detail": {
@@ -192,74 +630,50 @@
     "brain": "gemma-3-1b-it (local, llama.cpp)",
     "titles": [
      "Voxtral 3",
-     "DeepInfer: High-performance, large-scale inference framework for DeepSeek models",
+     "DeepInfer: High-performance inference framework for DeepSeek models",
      "EMudhra Intermediate CA Compromise",
      "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
      "Apple broke an essential presentation feature of iPads",
      "Publish fake stats, get cited in LLMs",
-     "Triplet of 'ghostly' galaxies hints at what dark matter is and isn't",
+     "Facebook Pages require paid subscription to post more than two links per month",
      "How I got over 300 Tor exit nodes removed",
-     "JAXA is about to perform a Phobos sample return mission",
-     "My Friend Bob Cringely"
+     "Triplet of 'ghostly' galaxies hints at what dark matter is and isn't",
+     "JAXA is about to perform a Phobos sample return mission"
     ]
    },
    "revert": null,
-   "prev": "8d2c3289f978287e56cd6c5b3b83defea4acfd6cfe6ad40e7e0987e5c5cff7c4",
-   "hash": "ed76062f159fe4cd1a864b4ecd5c3065d2557eee22353ed11a5b94f1ddaffe0c"
+   "prev": "ceb6bc72a8b98c1ae4e7629f4c1604f5c3d5a50e3a4cd22dc2c39c2683ae7a79",
+   "hash": "1921df6fdaa8e7eaa9c5bd82f19c193f58fa8349e83b75d96ca06a4ce113364a"
   }
  ],
  "declined": [
   {
    "tool": "inbox",
    "action": "click unsubscribe link",
-   "reason": "irreversible; link harvested for quora.com (open it yourself: https://es.quora.com/email_optout/qemail_unsubscribe?email_track_id=06bde26c6cfa48fc8963b546135f6ca9&ish=1&t=17924702327)",
-   "ts": "2026-10-20T18:11:18Z"
+   "reason": "irreversible; link harvested for quora.com (open it yourself from the original mail's List-Unsubscribe header: https://www.quora.com/email_optout/…)",
+   "ts": "2026-10-20T18:16:58Z"
   },
   {
    "tool": "inbox",
    "action": "click unsubscribe link",
-   "reason": "irreversible; link harvested for ollama.com (open it yourself: https://app.loops.so/unsubscribe/cmvgjifze3dz201vx4fkoayoy/8c79a764edcf1be1605cc09de9095be75289035c729dbda6196bb0e81783d)",
-   "ts": "2026-10-20T18:11:18Z"
+   "reason": "irreversible; link harvested for medium.com (open it yourself from the original mail's List-Unsubscribe header: https://medium.com/me/…)",
+   "ts": "2026-10-20T18:16:58Z"
   },
   {
    "tool": "inbox",
    "action": "click unsubscribe link",
-   "reason": "irreversible; link harvested for medium.com (open it yourself: https://medium.com/me/notifications/unsubscribe?token=021ac0f02aa9.f3193eff-c197-486e-85dd-9cccbaa71939.1792480638.allow)",
-   "ts": "2026-10-20T18:11:18Z"
-  },
-  {
-   "tool": "inbox",
-   "action": "click unsubscribe link",
-   "reason": "irreversible; link harvested for deeperlearning.producthunt.com (open it yourself: https://s-links.producthunt.com/unsub2?m=CAAACZfBYiEAAc3D8nIAAdMDw8gAAYC9zAkAAAAAAAYklQBq134L0kMPEy4LS5KsIosQBxIXngAF1QU)",
-   "ts": "2026-10-20T18:11:18Z"
-  },
-  {
-   "tool": "inbox",
-   "action": "click unsubscribe link",
-   "reason": "irreversible; link harvested for gohighlevel.com (open it yourself: https://services.msgsndr.com/emails/builder/unsubscribe-view/zELBHkVp0JPbbLvKIlF5/bx08i44RXiOEx6CE6Sfi?email=legal@alice)",
-   "ts": "2026-10-20T18:11:18Z"
-  },
-  {
-   "tool": "inbox",
-   "action": "click unsubscribe link",
-   "reason": "irreversible; link harvested for email.self.inc (open it yourself: https://odin.self.inc/email/one_click/unsubscribe/0b890a11-d201-483f-8f45-294c49b42feb)",
-   "ts": "2026-10-20T18:11:18Z"
-  },
-  {
-   "tool": "inbox",
-   "action": "click unsubscribe link",
-   "reason": "irreversible; link harvested for m.weworkremotely.com (open it yourself: https://email.m.weworkremotely.com/unsubscribe/dgTa8QkDAOKh3QHhod0BAaFZ9xLrSbVyl9Mpftn89w==)",
-   "ts": "2026-10-20T18:11:18Z"
+   "reason": "irreversible; link harvested for m.weworkremotely.com (open it yourself from the original mail's List-Unsubscribe header: https://email.m.weworkremotely.com/unsubscribe/…)",
+   "ts": "2026-10-20T18:16:58Z"
   }
  ],
  "signature": {
   "scheme": "SLOTH-RECEIPT-1",
   "date": "2026-10-20",
-  "head": "ed76062f159fe4cd1a864b4ecd5c3065d2557eee22353ed11a5b94f1ddaffe0c",
-  "entries": 3,
-  "declined": 7,
-  "signed_at": "2026-10-20T18:12:07Z",
-  "signature": "0c790705c3743154eddca1eef9901a9c9b8ec51cda0ba6e2a5f928d379b536319b121e6dc6b7f019ebecf4e6e4b14a88704895ac87a13bc79b6546aa52c8bb03",
+  "head": "1921df6fdaa8e7eaa9c5bd82f19c193f58fa8349e83b75d96ca06a4ce113364a",
+  "entries": 29,
+  "declined": 3,
+  "signed_at": "2026-10-20T18:17:41Z",
+  "signature": "3596a4a6b11b0ec187c7662a7bc470cd0c95e4f8b38b664190e69a873d1de713d190f0a5676ebbe886492e0895a21d60669d233ac9a50b276f3308d4aa9d8b07",
   "public_key": "e1043b6e6105f2683b602d92d0f3e52d1e30004e5aca71db5ddf33c5497493c0"
  }
 }
