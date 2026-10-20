@@ -1,0 +1,265 @@
+{
+ "scheme": "SLOTH-RECEIPT-1",
+ "date": "2026-10-20",
+ "meta": {
+  "brain": "gemma-3-1b-it (local, llama.cpp)",
+  "brain_url": "http://127.0.0.1:8750",
+  "summary": {
+   "tidy": {
+    "dir": "/tmp/demo-downloads",
+    "dry_run": false,
+    "moved": 0,
+    "by_bucket": {},
+    "skipped_over_limit": 0
+   },
+   "inbox": {
+    "scanned": 60,
+    "newsletters": [
+     {
+      "domain": "quora.com",
+      "uid": "22200"
+     },
+     {
+      "domain": "ollama.com",
+      "uid": "22215"
+     },
+     {
+      "domain": "medium.com",
+      "uid": "22219"
+     },
+     {
+      "domain": "deeperlearning.producthunt.com",
+      "uid": "22228"
+     },
+     {
+      "domain": "gohighlevel.com",
+      "uid": "22231"
+     },
+     {
+      "domain": "email.self.inc",
+      "uid": "22233"
+     },
+     {
+      "domain": "m.weworkremotely.com",
+      "uid": "22234"
+     }
+    ],
+    "human": 1,
+    "notify": 42,
+    "unclassified": 0,
+    "labeled": 0,
+    "unsub_links": 7,
+    "brain": "gemma-3-1b-it (local, llama.cpp)",
+    "deterministic_notifications": 37,
+    "ambiguous": 20,
+    "brain_classified": 17,
+    "brain_used": true,
+    "skipped_no_unsub": 4
+   },
+   "brief": {
+    "stories": 10,
+    "used_brain": true,
+    "items": [
+     {
+      "title": "Voxtral 3",
+      "url": "https://mistral.ai/news/voxtral-3/",
+      "points": 217,
+      "comments": 55,
+      "gist": "Voxtral 3 is a new device."
+     },
+     {
+      "title": "DeepInfer: High-performance, large-scale inference framework for DeepSeek models",
+      "url": "https://github.com/deepseek-ai/DeepInfer",
+      "points": 1888,
+      "comments": 720,
+      "gist": "DeepSeek models require a powerful inference framework for detailed analysis."
+     },
+     {
+      "title": "EMudhra Intermediate CA Compromise",
+      "url": "https://emudhra.we-have-a-problem.com/",
+      "points": 277,
+      "comments": 133,
+      "gist": "The EMudhra Intermediate CA agreement was reached."
+     },
+     {
+      "title": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
+      "url": "https://github.com/google-pytorch/torch_tpu",
+      "points": 62,
+      "comments": 19,
+      "gist": "Google has made TorchTPU available to the public, a native PyTorch backend for TPUs."
+     },
+     {
+      "title": "Apple broke an essential presentation feature of iPads",
+      "url": "https://teddysvoronos.com/2026-10-19-apple-broke-an-essential-presentation-feature-of-ipads/",
+      "points": 324,
+      "comments": 176,
+      "gist": "Apple has discontinued a key presentation feature on iPads."
+     },
+     {
+      "title": "Publish fake stats, get cited in LLMs",
+      "url": "https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web",
+      "points": 229,
+      "comments": 119,
+      "gist": "Do not publish false data, as it may be used to influence LLMs."
+     },
+     {
+      "title": "Triplet of 'ghostly' galaxies hints at what dark matter is and isn't",
+      "url": "https://www.quantamagazine.org/triplet-of-ghostly-galaxies-hints-at-what-dark-matter-is-and-isnt-20261014/",
+      "points": 62,
+      "comments": 12,
+      "gist": "The headline describes a potential clue about dark matter’s nature."
+     },
+     {
+      "title": "How I got over 300 Tor exit nodes removed",
+      "url": "https://kaba.cx/posts/20261020_Tor/",
+      "points": 190,
+      "comments": 52,
+      "gist": "I removed 300 Tor exit nodes during overnight maintenance."
+     },
+     {
+      "title": "JAXA is about to perform a Phobos sample return mission",
+      "url": "https://www.science.org/content/article/audacious-space-heist-japan-aims-bring-home-bits-martian-moon",
+      "points": 34,
+      "comments": 4,
+      "gist": "JAXA will send a spacecraft to study Phobos, a moon of Mars."
+     },
+     {
+      "title": "My Friend Bob Cringely",
+      "url": "https://tyma.com/my-cringe-story/",
+      "points": 104,
+      "comments": 33,
+      "gist": "Bob Cringely is a noted inventor.\n\nBob Cringely is an inventor."
+     }
+    ]
+   }
+  },
+  "target_dir": "/tmp/demo-downloads"
+ },
+ "entries": [
+  {
+   "i": 0,
+   "ts": "2026-10-20T18:09:47Z",
+   "tool": "tidy",
+   "action": "tidied 0 files into 0 buckets",
+   "detail": {
+    "dir": "/tmp/demo-downloads",
+    "dry_run": false,
+    "moved": 0,
+    "by_bucket": {},
+    "skipped_over_limit": 0
+   },
+   "revert": null,
+   "prev": "0000000000000000000000000000000000000000000000000000000000000000",
+   "hash": "ab4b8a5b3fbae7c987fced978bf298e9ec456571cd242ef4940e49740c355f79"
+  },
+  {
+   "i": 1,
+   "ts": "2026-10-20T18:11:23Z",
+   "tool": "inbox",
+   "action": "triaged 60 mails: 7 newsletters, 1 human, 42 notifications",
+   "detail": {
+    "scanned": 60,
+    "newsletters": 7,
+    "human": 1,
+    "notify": 42,
+    "deterministic_notifications": 37,
+    "ambiguous_for_brain": 20,
+    "brain_classified": 17,
+    "unsub_links": 7,
+    "labeled": 0,
+    "privacy": "envelope headers only; personal subjects never leave the machine",
+    "domains": [
+     "deeperlearning.producthunt.com",
+     "email.self.inc",
+     "gohighlevel.com",
+     "m.weworkremotely.com",
+     "medium.com",
+     "ollama.com",
+     "quora.com"
+    ]
+   },
+   "revert": null,
+   "prev": "ab4b8a5b3fbae7c987fced978bf298e9ec456571cd242ef4940e49740c355f79",
+   "hash": "8d2c3289f978287e56cd6c5b3b83defea4acfd6cfe6ad40e7e0987e5c5cff7c4"
+  },
+  {
+   "i": 2,
+   "ts": "2026-10-20T18:12:07Z",
+   "tool": "brief",
+   "action": "morning brief ready: 10 HN stories, summarised by local Gemma",
+   "detail": {
+    "stories": 10,
+    "brain": "gemma-3-1b-it (local, llama.cpp)",
+    "titles": [
+     "Voxtral 3",
+     "DeepInfer: High-performance, large-scale inference framework for DeepSeek models",
+     "EMudhra Intermediate CA Compromise",
+     "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
+     "Apple broke an essential presentation feature of iPads",
+     "Publish fake stats, get cited in LLMs",
+     "Triplet of 'ghostly' galaxies hints at what dark matter is and isn't",
+     "How I got over 300 Tor exit nodes removed",
+     "JAXA is about to perform a Phobos sample return mission",
+     "My Friend Bob Cringely"
+    ]
+   },
+   "revert": null,
+   "prev": "8d2c3289f978287e56cd6c5b3b83defea4acfd6cfe6ad40e7e0987e5c5cff7c4",
+   "hash": "ed76062f159fe4cd1a864b4ecd5c3065d2557eee22353ed11a5b94f1ddaffe0c"
+  }
+ ],
+ "declined": [
+  {
+   "tool": "inbox",
+   "action": "click unsubscribe link",
+   "reason": "irreversible; link harvested for quora.com (open it yourself: https://es.quora.com/email_optout/qemail_unsubscribe?email_track_id=06bde26c6cfa48fc8963b546135f6ca9&ish=1&t=17924702327)",
+   "ts": "2026-10-20T18:11:18Z"
+  },
+  {
+   "tool": "inbox",
+   "action": "click unsubscribe link",
+   "reason": "irreversible; link harvested for ollama.com (open it yourself: https://app.loops.so/unsubscribe/cmvgjifze3dz201vx4fkoayoy/8c79a764edcf1be1605cc09de9095be75289035c729dbda6196bb0e81783d)",
+   "ts": "2026-10-20T18:11:18Z"
+  },
+  {
+   "tool": "inbox",
+   "action": "click unsubscribe link",
+   "reason": "irreversible; link harvested for medium.com (open it yourself: https://medium.com/me/notifications/unsubscribe?token=021ac0f02aa9.f3193eff-c197-486e-85dd-9cccbaa71939.1792480638.allow)",
+   "ts": "2026-10-20T18:11:18Z"
+  },
+  {
+   "tool": "inbox",
+   "action": "click unsubscribe link",
+   "reason": "irreversible; link harvested for deeperlearning.producthunt.com (open it yourself: https://s-links.producthunt.com/unsub2?m=CAAACZfBYiEAAc3D8nIAAdMDw8gAAYC9zAkAAAAAAAYklQBq134L0kMPEy4LS5KsIosQBxIXngAF1QU)",
+   "ts": "2026-10-20T18:11:18Z"
+  },
+  {
+   "tool": "inbox",
+   "action": "click unsubscribe link",
+   "reason": "irreversible; link harvested for gohighlevel.com (open it yourself: https://services.msgsndr.com/emails/builder/unsubscribe-view/zELBHkVp0JPbbLvKIlF5/bx08i44RXiOEx6CE6Sfi?email=legal@alice)",
+   "ts": "2026-10-20T18:11:18Z"
+  },
+  {
+   "tool": "inbox",
+   "action": "click unsubscribe link",
+   "reason": "irreversible; link harvested for email.self.inc (open it yourself: https://odin.self.inc/email/one_click/unsubscribe/0b890a11-d201-483f-8f45-294c49b42feb)",
+   "ts": "2026-10-20T18:11:18Z"
+  },
+  {
+   "tool": "inbox",
+   "action": "click unsubscribe link",
+   "reason": "irreversible; link harvested for m.weworkremotely.com (open it yourself: https://email.m.weworkremotely.com/unsubscribe/dgTa8QkDAOKh3QHhod0BAaFZ9xLrSbVyl9Mpftn89w==)",
+   "ts": "2026-10-20T18:11:18Z"
+  }
+ ],
+ "signature": {
+  "scheme": "SLOTH-RECEIPT-1",
+  "date": "2026-10-20",
+  "head": "ed76062f159fe4cd1a864b4ecd5c3065d2557eee22353ed11a5b94f1ddaffe0c",
+  "entries": 3,
+  "declined": 7,
+  "signed_at": "2026-10-20T18:12:07Z",
+  "signature": "0c790705c3743154eddca1eef9901a9c9b8ec51cda0ba6e2a5f928d379b536319b121e6dc6b7f019ebecf4e6e4b14a88704895ac87a13bc79b6546aa52c8bb03",
+  "public_key": "e1043b6e6105f2683b602d92d0f3e52d1e30004e5aca71db5ddf33c5497493c0"
+ }
+}

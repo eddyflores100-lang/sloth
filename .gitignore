@@ -1,0 +1,4 @@
+.sloth_key
+__pycache__/
+*.pyc
+receipts/*-run.json
