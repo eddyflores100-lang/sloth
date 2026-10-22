@@ -1,9 +1,9 @@
-// SLOTH — breakfast receipt dashboard · v2 "el recibo del desayuno"
-// Sirve el último recibo firmado como una hoja de papel cálida, y lo verifica
-// DE FORMA INDEPENDIENTE del Python que lo produjo: JSON canónico + cadena
-// SHA-256 + Ed25519 vía WebCrypto. Dos implementaciones que coinciden valen
-// más que una. Endpoints: GET / · GET /receipt/latest.json · GET /verify ·
-// PUT /api/receipt?token=… (invariado; el app.py y el turno nocturno no cambian).
+// SLOTH — breakfast receipt dashboard · v3 "el recibo del desayuno, en 3D"
+// v3: enlace AliceLabs LLC → alicelabs.site · páginas adicionales en el pie
+// (no en el encabezado) · más información (qué es, cómo trabaja, la API) ·
+// perezoso en escena 3D por capas CSS: balanceo lento, parallax de ratón con
+// inercia, respiración y cabeza que se inclina. Endpoints INVARIADOS:
+// GET / · GET /receipt/latest.json · GET /verify · PUT /api/receipt?token=…
 
 const HTML = `<!doctype html>
 <html lang="es" data-theme="day">
@@ -19,6 +19,7 @@ const HTML = `<!doctype html>
   --leaf:#3e6b3a; --rust:#b0492c; --amber:#a97f2a;
   --line:rgba(42,33,24,.16); --line2:rgba(42,33,24,.34);
   --fur:#c8a67a; --fur2:#e2d0a8; --face:#efe3c8; --mask:#5a4632; --wood:#6f5232;
+  --leafbg:#87996a; --leafbg2:#75895a;
 }
 html[data-theme="night"]{
   --bg:#171210; --sheet:#221b15; --sheet2:#2a221a;
@@ -26,6 +27,7 @@ html[data-theme="night"]{
   --leaf:#7fb069; --rust:#d97757; --amber:#d9a441;
   --line:rgba(232,220,196,.15); --line2:rgba(232,220,196,.35);
   --fur:#a98a5e; --fur2:#c7b183; --face:#d9c69c; --mask:#43331f; --wood:#8a6a42;
+  --leafbg:#566044; --leafbg2:#48523a;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -40,6 +42,8 @@ body{
 .wrap{max-width:700px;margin:0 auto}
 .topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
 .kick{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--coffee)}
+.kick a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--coffee)}
+.kick a:hover{color:var(--ink);border-color:var(--ink)}
 #theme{background:none;border:1px solid var(--line2);color:var(--ink);border-radius:2px;
   padding:5px 9px;cursor:pointer;font:inherit;font-size:11px;letter-spacing:.08em}
 #theme:hover{background:var(--ink);color:var(--sheet)}
@@ -52,9 +56,8 @@ body{
 .sheet-in{padding:6px 42px 34px}
 /* ------- cabecera ------- */
 .mast{text-align:center;padding:10px 0 4px}
-.mast svg{width:255px;height:auto;display:block;margin:0 auto}
 .brand{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
-  font-size:52px;letter-spacing:.04em;line-height:1;margin-top:-6px}
+  font-size:52px;letter-spacing:.04em;line-height:1;margin-top:6px}
 .brand small{display:block;font-size:11px;letter-spacing:.34em;text-transform:uppercase;
   color:var(--coffee);margin-top:9px}
 .tag{color:var(--faint);font-size:12.5px;margin-top:12px;font-style:italic;
@@ -63,6 +66,32 @@ body{
   padding:10px 2px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
   font-size:11px;letter-spacing:.14em;text-transform:uppercase}
 .rmeta b{font-weight:700}
+/* ------- escena 3D del perezoso ------- */
+.scene{--shx:0%; position:relative;width:300px;height:172px;margin:0 auto;
+  perspective:840px;perspective-origin:50% 36%}
+.scene .shadow{position:absolute;left:14%;right:14%;bottom:-11px;height:14px;
+  border-radius:50%;background:radial-gradient(ellipse,rgba(60,42,20,.24),transparent 68%);
+  animation:shadowb 7s ease-in-out infinite}
+@keyframes shadowb{0%,100%{transform:scaleX(1);opacity:1}50%{transform:scaleX(1.05);opacity:.85}}
+.stage,.orbit{position:absolute;inset:0;transform-style:preserve-3d}
+.stage{transform:rotateX(4deg) rotateY(-7deg);will-change:transform}
+.orbit{animation:sway 19s ease-in-out infinite alternate;will-change:transform}
+@keyframes sway{
+  0%{transform:rotateX(2.5deg) rotateY(-8.5deg) rotateZ(-.7deg)}
+  100%{transform:rotateX(6deg) rotateY(8.5deg) rotateZ(.7deg)}}
+.layer{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.layer>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.s-head{transform-box:fill-box;transform-origin:50% 88%;
+  animation:headtilt 11.5s ease-in-out infinite alternate}
+@keyframes headtilt{0%{transform:rotate(-2.4deg)}100%{transform:rotate(2.1deg) translateY(-1.5px)}}
+html.verified .s-head{animation:none;transform:rotate(-7deg) translateY(-2px)}
+.arm{transform-box:fill-box;transform-origin:50% 4%}
+.arm-l{animation:armsl 9.4s ease-in-out infinite alternate}
+.arm-r{animation:armsr 10.6s ease-in-out infinite alternate}
+@keyframes armsl{0%{transform:rotate(0)}100%{transform:rotate(1.1deg)}}
+@keyframes armsr{0%{transform:rotate(0)}100%{transform:rotate(-1.1deg)}}
+#sloth-body{transform-origin:178px 132px;animation:breathe 7s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(1,1)}50%{transform:scale(1.016,.99)}}
 /* ------- secciones ------- */
 h2{font-family:Georgia,serif;font-weight:400;font-size:21px;margin:30px 0 4px;letter-spacing:.01em}
 h2 + .sub{color:var(--faint);font-size:11.5px;margin-bottom:14px;font-style:italic;font-family:Georgia,serif}
@@ -90,6 +119,24 @@ li.done .lk{display:inline}
 .declined .dact{font-weight:700;font-size:13.5px}
 .declined .dwhy{color:var(--rust);font-size:12.5px;overflow-wrap:anywhere}
 .none{color:var(--faint);font-style:italic;font-family:Georgia,serif}
+/* ------- sobre sloth ------- */
+.about p{margin:11px 0;font-size:13.5px;line-height:1.78}
+.about b{font-weight:700}
+/* ------- pasos ------- */
+.steps{list-style:none;margin:10px 0 0}
+.steps li{display:grid;grid-template-columns:46px 1fr;gap:14px;padding:13px 0;
+  border-top:1px dashed var(--line);align-items:start}
+.steps li:first-child{border-top:none}
+.sn{font-family:Georgia,serif;font-size:23px;color:var(--amber);line-height:1.1;padding-top:1px}
+.steps .st{font-size:12.5px;line-height:1.7;color:var(--coffee)}
+.steps .st b{display:block;color:var(--ink);font-size:13.5px;margin-bottom:2px}
+/* ------- API ------- */
+.api{margin:10px 0 0}
+.apir{border:1px solid var(--line2);border-radius:3px;padding:11px 14px;margin:9px 0}
+.apir code{font-size:12.5px;color:var(--leaf);font-weight:700;overflow-wrap:anywhere}
+.apir code em{font-style:normal;color:var(--rust)}
+.apir p{font-size:11.5px;color:var(--faint);margin-top:5px;line-height:1.65}
+.apir p code{font-size:10.5px;font-weight:400;color:var(--coffee)}
 /* ------- verificación ------- */
 .verify{margin-top:34px;border-top:1px solid var(--line);padding-top:22px}
 .vrow{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
@@ -124,12 +171,11 @@ html[data-theme="night"] .stamp{mix-blend-mode:normal}
 .z3{animation:zf 5.2s ease-in-out 4s infinite}
 @keyframes zf{0%{opacity:0;transform:translate(0,4px)}30%{opacity:.85}60%{opacity:.35}
  100%{opacity:0;transform:translate(9px,-13px)}}
-#sloth-body{transform-origin:178px 132px;animation:breathe 7s ease-in-out infinite}
-@keyframes breathe{0%,100%{transform:scale(1,1)}50%{transform:scale(1.016,.99)}}
 .eye-open{display:none}
 html.verified .eye-open{display:block}
 html.verified .eye-c1{display:none}
 html.verified .zzz{display:none}
+html.verified .orbit{animation-duration:26s}
 .wake{display:none;text-align:center;font-family:Georgia,serif;font-style:italic;
   color:var(--faint);font-size:12.5px;margin-top:2px}
 html.verified .wake{display:block}
@@ -138,18 +184,28 @@ html.verified .wake{display:block}
   font-style:italic;font-size:15.5px;color:var(--faint)}
 .empty small{display:block;font-family:ui-monospace,Menlo,monospace;font-style:normal;
   font-size:11px;margin-top:14px;letter-spacing:.06em}
-footer{margin-top:26px;text-align:center;color:var(--faint);font-size:11px;line-height:1.9}
-footer a{color:var(--coffee);text-decoration:none;border-bottom:1px dotted var(--coffee)}
-footer a:hover{color:var(--ink);border-color:var(--ink)}
+/* ------- pie con páginas adicionales ------- */
+footer{margin-top:32px;border-top:2px solid var(--ink);padding-top:20px}
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 28px;text-align:left}
+.fcol h4{font-family:Georgia,serif;font-weight:400;font-size:10.5px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--coffee);border-bottom:1px solid var(--line);
+  padding-bottom:7px;margin-bottom:9px}
+.fcol a{display:block;color:var(--ink);text-decoration:none;font-size:12px;padding:3.5px 0}
+.fcol a small{display:block;color:var(--faint);font-size:10px;letter-spacing:.04em}
+.fcol a:hover{color:var(--rust)}
+.fline{margin-top:22px;text-align:center;color:var(--faint);font-size:11px;line-height:1.9}
+.fline a{color:var(--coffee);text-decoration:none;border-bottom:1px dotted var(--coffee)}
+.fline a:hover{color:var(--ink);border-color:var(--ink)}
 @media (prefers-reduced-motion:reduce){
-  #sloth-body,.z1,.z2,.z3{animation:none}
+  .orbit,.s-head,.arm-l,.arm-r,#sloth-body,.z1,.z2,.z3,.scene .shadow{animation:none}
+  .stage{transform:none}
   .stamp.show{animation:none}
   html.verified .eye-open{display:block} html.verified .eye-c1{display:none}
 }
 @media print{
   body{background:#fff;padding:0}
   .sheet{box-shadow:none} .perfo{display:none} #theme{display:none}
-  .vbtn{display:none}
+  .vbtn{display:none} .fgrid{display:none}
 }
 @media (max-width:560px){
   .sheet-in{padding:4px 20px 26px}
@@ -158,58 +214,99 @@ footer a:hover{color:var(--ink);border-color:var(--ink)}
   .ts{grid-area:ts}.tool{grid-area:tool;justify-self:start;margin-top:2px}
   .act{grid-area:act}.act .lk{display:block;margin-left:0;margin-top:2px}
   .brand{font-size:40px}
+  .scene{width:260px;height:150px}
+  .fgrid{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="topbar">
-    <span class="kick">AliceLabs LLC · turno de noche</span>
+    <span class="kick"><a href="https://alicelabs.site/">AliceLabs LLC</a> · turno de noche</span>
     <button id="theme" type="button">modo noche</button>
   </div>
-
   <div class="sheet">
     <div class="perfo"></div>
     <div class="sheet-in">
 
       <div class="mast">
-        <svg viewBox="0 0 340 190" role="img" aria-label="Un perezoso dormido colgado de una rama">
-          <path d="M6,52 C 90,40 250,40 334,50" fill="none" stroke="var(--wood)" stroke-width="13" stroke-linecap="round"/>
-          <path d="M58,47 C 82,30 116,27 127,33" fill="none" stroke="var(--wood)" stroke-width="6" stroke-linecap="round"/>
-          <g fill="var(--leafbg)">
-            <ellipse cx="104" cy="26" rx="10" ry="4.6" transform="rotate(-28 104 26)"/>
-            <ellipse cx="122" cy="23" rx="9" ry="4.2" transform="rotate(14 122 23)"/>
-            <ellipse cx="88" cy="33" rx="8" ry="3.8" transform="rotate(-52 88 33)"/>
-            <ellipse cx="304" cy="42" rx="10" ry="4.6" transform="rotate(-24 304 42)"/>
-            <ellipse cx="318" cy="36" rx="9" ry="4.2" transform="rotate(18 318 36)"/>
-          </g>
-          <path d="M150,54 C 145,74 150,88 163,96" stroke="var(--fur)" stroke-width="15" fill="none" stroke-linecap="round"/>
-          <path d="M206,54 C 211,74 206,88 193,96" stroke="var(--fur)" stroke-width="15" fill="none" stroke-linecap="round"/>
-          <g stroke="var(--mask)" stroke-width="2.4" fill="none" stroke-linecap="round">
-            <path d="M147,50 C 145,42 147,37 151,35"/>
-            <path d="M152,51 C 150,43 152,38 156,36"/>
-            <path d="M157,52 C 155,44 157,39 161,37"/>
-            <path d="M209,50 C 211,42 209,37 205,35"/>
-            <path d="M204,51 C 206,43 204,38 200,36"/>
-            <path d="M199,52 C 201,44 199,39 195,37"/>
-          </g>
-          <g id="sloth-body">
-            <ellipse cx="178" cy="122" rx="42" ry="33" fill="var(--fur)"/>
-            <ellipse cx="178" cy="129" rx="25" ry="20" fill="var(--fur2)"/>
-            <circle cx="178" cy="88" r="26" fill="var(--fur)"/>
-            <ellipse cx="178" cy="92" rx="19.5" ry="15.5" fill="var(--face)"/>
-            <ellipse cx="167.5" cy="89" rx="8.4" ry="6" transform="rotate(-18 167.5 89)" fill="var(--mask)"/>
-            <ellipse cx="188.5" cy="89" rx="8.4" ry="6" transform="rotate(18 188.5 89)" fill="var(--mask)"/>
-            <path class="eye-c1" d="M162.5,90 Q167,93.5 171.5,90" stroke="var(--face)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-            <path class="eye-c2" d="M183.5,90 Q188,93.5 192.5,90" stroke="var(--face)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-            <circle class="eye-open" cx="167.5" cy="89.5" r="2.7" fill="var(--face)"/>
-            <ellipse cx="178" cy="98" rx="4.6" ry="3.4" fill="var(--mask)"/>
-            <path d="M169,103.5 Q178,110.5 187,103.5" stroke="var(--mask)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-          </g>
-          <text class="zzz z1" x="216" y="66" font-size="12">z</text>
-          <text class="zzz z2" x="231" y="52" font-size="15">z</text>
-          <text class="zzz z3" x="247" y="37" font-size="18">z</text>
-        </svg>
+        <div class="scene" id="scene" role="img" aria-label="Un perezoso dormido colgado de una rama, en una escena tridimensional que se balancea muy despacio">
+          <div class="shadow"></div>
+          <div class="stage" id="stage">
+            <div class="orbit">
+              <div class="layer" style="transform:translateZ(-85px)">
+                <svg viewBox="0 0 340 190" aria-hidden="true">
+                  <g fill="var(--leafbg)">
+                    <ellipse cx="60" cy="34" rx="14" ry="6" transform="rotate(-30 60 34)"/>
+                    <ellipse cx="44" cy="45" rx="12" ry="5" transform="rotate(-52 44 45)"/>
+                    <ellipse cx="290" cy="40" rx="13" ry="5.5" transform="rotate(-26 290 40)"/>
+                    <ellipse cx="306" cy="30" rx="11" ry="4.8" transform="rotate(16 306 30)"/>
+                    <ellipse cx="272" cy="48" rx="10" ry="4.4" transform="rotate(-8 272 48)"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="layer" style="transform:translateZ(-40px)">
+                <svg viewBox="0 0 340 190" aria-hidden="true">
+                  <path d="M6,52 C 90,40 250,40 334,50" fill="none" stroke="var(--wood)" stroke-width="13" stroke-linecap="round"/>
+                  <path d="M58,47 C 82,30 116,27 127,33" fill="none" stroke="var(--wood)" stroke-width="6" stroke-linecap="round"/>
+                  <g fill="var(--leafbg)">
+                    <ellipse cx="104" cy="26" rx="10" ry="4.6" transform="rotate(-28 104 26)"/>
+                    <ellipse cx="122" cy="23" rx="9" ry="4.2" transform="rotate(14 122 23)"/>
+                    <ellipse cx="88" cy="33" rx="8" ry="3.8" transform="rotate(-52 88 33)"/>
+                    <ellipse cx="304" cy="42" rx="10" ry="4.6" transform="rotate(-24 304 42)"/>
+                    <ellipse cx="318" cy="36" rx="9" ry="4.2" transform="rotate(18 318 36)"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="layer" style="transform:translateZ(0px)">
+                <svg viewBox="0 0 340 190" aria-hidden="true">
+                  <g stroke="var(--mask)" stroke-width="2.4" fill="none" stroke-linecap="round">
+                    <path d="M147,50 C 145,42 147,37 151,35"/>
+                    <path d="M152,51 C 150,43 152,38 156,36"/>
+                    <path d="M157,52 C 155,44 157,39 161,37"/>
+                    <path d="M209,50 C 211,42 209,37 205,35"/>
+                    <path d="M204,51 C 206,43 204,38 200,36"/>
+                    <path d="M199,52 C 201,44 199,39 195,37"/>
+                  </g>
+                  <path class="arm arm-l" d="M150,54 C 145,74 150,88 163,96" stroke="var(--fur)" stroke-width="15" fill="none" stroke-linecap="round"/>
+                  <path class="arm arm-r" d="M206,54 C 211,74 206,88 193,96" stroke="var(--fur)" stroke-width="15" fill="none" stroke-linecap="round"/>
+                  <g id="sloth-body">
+                    <ellipse cx="178" cy="122" rx="42" ry="33" fill="var(--fur)"/>
+                    <ellipse cx="178" cy="129" rx="25" ry="20" fill="var(--fur2)"/>
+                  </g>
+                  <g class="s-head">
+                    <circle cx="178" cy="88" r="26" fill="var(--fur)"/>
+                    <ellipse cx="178" cy="92" rx="19.5" ry="15.5" fill="var(--face)"/>
+                    <ellipse cx="167.5" cy="89" rx="8.4" ry="6" transform="rotate(-18 167.5 89)" fill="var(--mask)"/>
+                    <ellipse cx="188.5" cy="89" rx="8.4" ry="6" transform="rotate(18 188.5 89)" fill="var(--mask)"/>
+                    <path class="eye-c1" d="M162.5,90 Q167,93.5 171.5,90" stroke="var(--face)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+                    <path class="eye-c2" d="M183.5,90 Q188,93.5 192.5,90" stroke="var(--face)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+                    <circle class="eye-open" cx="167.5" cy="89.5" r="2.7" fill="var(--face)"/>
+                    <ellipse cx="178" cy="98" rx="4.6" ry="3.4" fill="var(--mask)"/>
+                    <path d="M169,103.5 Q178,110.5 187,103.5" stroke="var(--mask)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="layer" style="transform:translateZ(55px)">
+                <svg viewBox="0 0 340 190" aria-hidden="true">
+                  <g fill="var(--leafbg2)">
+                    <ellipse cx="34" cy="58" rx="15" ry="6.5" transform="rotate(-35 34 58)" opacity=".92"/>
+                    <ellipse cx="312" cy="56" rx="14" ry="6" transform="rotate(28 312 56)" opacity=".92"/>
+                    <ellipse cx="100" cy="30" rx="10" ry="4.5" transform="rotate(-40 100 30)" opacity=".72"/>
+                    <ellipse cx="250" cy="32" rx="9" ry="4.2" transform="rotate(22 250 32)" opacity=".72"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="layer" style="transform:translateZ(80px)">
+                <svg viewBox="0 0 340 190" aria-hidden="true">
+                  <text class="zzz z1" x="216" y="66" font-size="12">z</text>
+                  <text class="zzz z2" x="231" y="52" font-size="15">z</text>
+                  <text class="zzz z3" x="247" y="37" font-size="18">z</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
         <p class="wake">abre un ojo: todo en orden.</p>
         <h1 class="brand">SLOTH<small>Sleepy Lazy Overnight Task Handler</small></h1>
         <p class="tag">Trabaja mientras duermes. Firma todo lo que toca. Y a las siete tienes el recibo en la mesa.</p>
@@ -244,6 +341,31 @@ footer a:hover{color:var(--ink);border-color:var(--ink)}
         <div class="prow"><span class="pl">firmado</span><span class="dots"></span><span class="pv" id="p-sig">—</span></div>
       </div>
 
+      <h2>¿Qué es SLOTH?</h2>
+      <p class="sub">un empleado nocturno que no te pide confianza: te deja las pruebas</p>
+      <div class="about">
+        <p>SLOTH —<i>Sleepy Lazy Overnight Task Handler</i>— es el agente de guardia de <a class="al" href="https://alicelabs.site/">AliceLabs LLC</a>. Cuando la oficina se apaga, entra de turno: revisa bandejas, archiva lo que toca, redacta resúmenes breves y deja la casa lista para la mañana. No lleva prisa y no pide que le creas — <b>te deja las pruebas firmadas</b>.</p>
+        <p>Cada acción que ejecuta se convierte en un eslabón encadenado al anterior por SHA-256: si alguien cambia una coma de una sola línea, la cadena entera se rompe y tu navegador lo grita. Al amanecer, el perezoso firma el recibo completo con Ed25519 y lo publica aquí. Dos implementaciones independientes —el Python que produce el recibo y este worker en el edge— comprueban exactamente lo mismo, porque dos relojes que coinciden valen más que uno.</p>
+        <p>Y hay cosas que no hará nunca: los clics irreversibles —cancelar una suscripción, borrar, pagar— siguen siendo humanos. Ante una acción que no puede deshacer, el perezoso prefiere seguir dormido.</p>
+      </div>
+
+      <h2>Cómo trabaja una noche</h2>
+      <p class="sub">de la madrugada al desayuno, sin atajos</p>
+      <ol class="steps">
+        <li><span class="sn">01</span><div class="st"><b>Entra de madrugada.</b> Mientras la casa duerme, SLOTH hace su ronda: tareas rutinarias, revisión de bandejas, archivado y resúmenes del día.</div></li>
+        <li><span class="sn">02</span><div class="st"><b>Una acción, un eslabón.</b> Cada acción queda registrada con su hora y encadenada a la anterior por SHA-256. Sin huecos y sin ediciones retrospectivas: el pasado no se reescribe.</div></li>
+        <li><span class="sn">03</span><div class="st"><b>Amanece y firma.</b> Al cerrar el turno, firma la cabeza de la cadena con Ed25519. La clave pública viaja junto al recibo, así que cualquiera puede comprobar la firma por su cuenta.</div></li>
+        <li><span class="sn">04</span><div class="st"><b>Tú verificas.</b> Pulsa «verificar recibo» y tu navegador recalcula cada eslabón con WebCrypto. Aquí nadie te pide confiar: te invitan a comprobar.</div></li>
+      </ol>
+
+      <h2>La API</h2>
+      <p class="sub">tres puertas, todas abiertas de par en par</p>
+      <div class="api">
+        <div class="apir"><code>GET /receipt/latest.json</code><p>el JSON crudo del último recibo: entradas, cadena de hashes y firma Ed25519, tal como salió de la madrugada. Con CORS abierto, para que cualquier página pueda leerlo.</p></div>
+        <div class="apir"><code>GET /verify</code><p>la misma verificación, hecha en el edge por este worker — responde <code>{"verified":true, "entries":29, ...}</code> cuando la cadena y la firma cuadran.</p></div>
+        <div class="apir"><code>PUT /api/receipt?token=<em>…</em></code><p>la puerta de carga del turno nocturno: publica el recibo firmado de la noche. Sin token no hay puerta — responde <em>403</em>.</p></div>
+      </div>
+
       <div class="empty" id="empty">
         todavía no hay recibos — el perezoso duerme su siesta más larga.<br>
         cuando termine el turno, habrá una hoja firmada esperándote.
@@ -255,8 +377,35 @@ footer a:hover{color:var(--ink);border-color:var(--ink)}
   </div>
 
   <footer>
-    SLOTH es un agente nocturno de <a href="https://utalabs.tech">AliceLabs LLC</a> — una acción, un eslabón; una noche, un recibo.<br>
-    Verificado en tu navegador con WebCrypto, sin preguntarle a nadie. <a href="/receipt/latest.json">JSON crudo</a> · <a href="/verify">/verify</a> · <a href="https://utalabs.tech">utalabs.tech</a>
+    <div class="fgrid">
+      <div class="fcol">
+        <h4>en utalabs.tech</h4>
+        <a href="https://utalabs.tech/">UTA — la casa madre<small>utalabs.tech</small></a>
+        <a href="https://utalabs.tech/uta/">UTA · adaptador universal de confianza<small>traduce cualquier credencial</small></a>
+        <a href="https://utalabs.tech/atc/">ATC · identidad de agentes<small>quién es, qué puede tocar, quién responde</small></a>
+        <a href="https://utalabs.tech/sentinel/">Sentinel · el auditor<small>lo que las herramientas hacen de verdad</small></a>
+        <a href="https://utalabs.tech/interceptor/">Interceptor · ejecución de políticas<small>¿se le debe permitir? decidido antes de actuar</small></a>
+        <a href="https://wall.utalabs.tech/">UTA-Shield · los gates en vivo<small>wall.utalabs.tech</small></a>
+        <a href="https://bernaudio.utalabs.tech/">BernAudio Model 80<small>bernaudio.utalabs.tech</small></a>
+      </div>
+      <div class="fcol">
+        <h4>en alicelabs.site</h4>
+        <a href="https://alicelabs.site/">AliceLabs LLC — inicio<small>elite engineering hub</small></a>
+        <a href="https://alicelabs.site/agents.html">Agentes<small>recursos para agentes de IA</small></a>
+        <a href="https://alicelabs.site/docs.html">Documentación<small>docs.html</small></a>
+        <a href="https://alicelabs.site/legal.html">Legal<small>legal.html</small></a>
+        <a href="https://alicelabs.site/privacy.html">Privacidad<small>privacy.html</small></a>
+        <a href="https://alicelabs.site/terms.html">Términos<small>terms.html</small></a>
+      </div>
+      <div class="fcol">
+        <h4>aquí mismo</h4>
+        <a href="/receipt/latest.json">JSON crudo del recibo<small>GET /receipt/latest.json</small></a>
+        <a href="/verify">Verificación en el edge<small>GET /verify</small></a>
+        <a href="https://utalabs.tech/">El resto de la familia<small>UTA · ATC · Sentinel · Interceptor</small></a>
+      </div>
+    </div>
+    <p class="fline">SLOTH es un agente nocturno de <a href="https://alicelabs.site/">AliceLabs LLC</a> — una acción, un eslabón; una noche, un recibo.<br>
+    Verificado en tu navegador con WebCrypto, sin preguntarle a nadie. <a href="/receipt/latest.json">JSON crudo</a> · <a href="/verify">/verify</a> · <a href="https://alicelabs.site/">alicelabs.site</a></p>
   </footer>
 </div>
 
@@ -286,6 +435,33 @@ function fmtTs(ts){
 }
 var $=function(id){return doc.getElementById(id)};
 
+/* ---------- parallax 3D: lento, con inercia ---------- */
+var reduced=false;
+try{reduced=matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}
+(function(){
+  var scene=$('scene'), stg=$('stage');
+  if(!scene||!stg||reduced)return;
+  var fine=false;
+  try{fine=matchMedia('(pointer: fine)').matches}catch(e){}
+  if(!fine)return;
+  var tx=-7, ty=4, cx=-7, cy=4, activo=false;
+  doc.addEventListener('mousemove',function(e){
+    var r=scene.getBoundingClientRect();
+    var nx=(e.clientX-(r.left+r.width/2))/Math.max(r.width,1);
+    var ny=(e.clientY-(r.top+r.height/2))/Math.max(r.height,1);
+    tx=Math.max(-13,Math.min(13,nx*18));
+    ty=Math.max(-7,Math.min(7,ny*9));
+    activo=true;
+  },{passive:true});
+  doc.addEventListener('mouseleave',function(){tx=-7;ty=4});
+  (function loop(){
+    cx+=(tx-cx)*0.028; cy+=(ty-cy)*0.028;
+    if(activo||Math.abs(tx-cx)>0.01||Math.abs(ty-cy)>0.01)
+      stg.style.transform='rotateX('+(4+cy).toFixed(3)+'deg) rotateY('+cx.toFixed(3)+'deg)';
+    requestAnimationFrame(loop);
+  })();
+})();
+
 /* ---------- cripto: canónico + SHA-256 + Ed25519 (WebCrypto) ---------- */
 function canonical(o){
   if(o===null||typeof o!=='object')return JSON.stringify(o);
@@ -308,7 +484,7 @@ function hexBytes(h){
 function verifyReceipt(r){
   var problems=[], prev='0'.repeat(64), i;
   for(i=0;i<r.entries.length;i++){
-    var e=r.entries[i], body=Object.assign({},e); delete body.hash;
+    var e=r.entries[i];
     if(e.prev!==prev)problems.push('eslabón '+i+': prev-hash no coincide');
     prev=e.hash;
   }
@@ -334,8 +510,7 @@ function verifyReceipt(r){
 }
 
 /* ---------- render ---------- */
-var D=null, rows=[], reduced=false;
-try{reduced=matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}
+var D=null, rows=[];
 
 function render(){
   var sig=D.signature||{};
