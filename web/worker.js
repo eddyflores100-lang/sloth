@@ -184,18 +184,15 @@ html.verified .wake{display:block}
   font-style:italic;font-size:15.5px;color:var(--faint)}
 .empty small{display:block;font-family:ui-monospace,Menlo,monospace;font-style:normal;
   font-size:11px;margin-top:14px;letter-spacing:.06em}
-/* ------- pie con páginas adicionales ------- */
-footer{margin-top:32px;border-top:2px solid var(--ink);padding-top:20px}
-.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 28px;text-align:left}
-.fcol h4{font-family:Georgia,serif;font-weight:400;font-size:10.5px;letter-spacing:.22em;
-  text-transform:uppercase;color:var(--coffee);border-bottom:1px solid var(--line);
-  padding-bottom:7px;margin-bottom:9px}
-.fcol a{display:block;color:var(--ink);text-decoration:none;font-size:12px;padding:3.5px 0}
-.fcol a small{display:block;color:var(--faint);font-size:10px;letter-spacing:.04em}
-.fcol a:hover{color:var(--rust)}
-.fline{margin-top:22px;text-align:center;color:var(--faint);font-size:11px;line-height:1.9}
-.fline a{color:var(--coffee);text-decoration:none;border-bottom:1px dotted var(--coffee)}
-.fline a:hover{color:var(--ink);border-color:var(--ink)}
+/* ------- pie: solo los enlaces, nada más ------- */
+footer{margin-top:34px;border-top:2px solid var(--ink);padding-top:17px;text-align:center}
+.flinks{font-family:Georgia,serif;font-size:14.5px;line-height:2.1}
+.flinks a{color:var(--ink);text-decoration:none;white-space:nowrap;padding:2px 2px}
+.flinks a:hover{color:var(--rust)}
+.flinks .sep{color:var(--faint);padding:0 9px;font-size:12px}
+.flinks .soft{color:var(--faint)}
+.fline{margin-top:10px;color:var(--faint);font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase}
 @media (prefers-reduced-motion:reduce){
   .orbit,.s-head,.arm-l,.arm-r,#sloth-body,.z1,.z2,.z3,.scene .shadow{animation:none}
   .stage{transform:none}
@@ -205,7 +202,7 @@ footer{margin-top:32px;border-top:2px solid var(--ink);padding-top:20px}
 @media print{
   body{background:#fff;padding:0}
   .sheet{box-shadow:none} .perfo{display:none} #theme{display:none}
-  .vbtn{display:none} .fgrid{display:none}
+  .vbtn{display:none} .flinks,.fline{display:none}
 }
 @media (max-width:560px){
   .sheet-in{padding:4px 20px 26px}
@@ -215,7 +212,8 @@ footer{margin-top:32px;border-top:2px solid var(--ink);padding-top:20px}
   .act{grid-area:act}.act .lk{display:block;margin-left:0;margin-top:2px}
   .brand{font-size:40px}
   .scene{width:260px;height:150px}
-  .fgrid{grid-template-columns:1fr 1fr}
+  .flinks{font-size:13.5px}
+  .flinks .sep{padding:0 6px}
 }
 </style>
 </head>
@@ -377,35 +375,10 @@ footer{margin-top:32px;border-top:2px solid var(--ink);padding-top:20px}
   </div>
 
   <footer>
-    <div class="fgrid">
-      <div class="fcol">
-        <h4>en utalabs.tech</h4>
-        <a href="https://utalabs.tech/">UTA — la casa madre<small>utalabs.tech</small></a>
-        <a href="https://utalabs.tech/uta/">UTA · adaptador universal de confianza<small>traduce cualquier credencial</small></a>
-        <a href="https://utalabs.tech/atc/">ATC · identidad de agentes<small>quién es, qué puede tocar, quién responde</small></a>
-        <a href="https://utalabs.tech/sentinel/">Sentinel · el auditor<small>lo que las herramientas hacen de verdad</small></a>
-        <a href="https://utalabs.tech/interceptor/">Interceptor · ejecución de políticas<small>¿se le debe permitir? decidido antes de actuar</small></a>
-        <a href="https://wall.utalabs.tech/">UTA-Shield · los gates en vivo<small>wall.utalabs.tech</small></a>
-        <a href="https://bernaudio.utalabs.tech/">BernAudio Model 80<small>bernaudio.utalabs.tech</small></a>
-      </div>
-      <div class="fcol">
-        <h4>en alicelabs.site</h4>
-        <a href="https://alicelabs.site/">AliceLabs LLC — inicio<small>elite engineering hub</small></a>
-        <a href="https://alicelabs.site/agents.html">Agentes<small>recursos para agentes de IA</small></a>
-        <a href="https://alicelabs.site/docs.html">Documentación<small>docs.html</small></a>
-        <a href="https://alicelabs.site/legal.html">Legal<small>legal.html</small></a>
-        <a href="https://alicelabs.site/privacy.html">Privacidad<small>privacy.html</small></a>
-        <a href="https://alicelabs.site/terms.html">Términos<small>terms.html</small></a>
-      </div>
-      <div class="fcol">
-        <h4>aquí mismo</h4>
-        <a href="/receipt/latest.json">JSON crudo del recibo<small>GET /receipt/latest.json</small></a>
-        <a href="/verify">Verificación en el edge<small>GET /verify</small></a>
-        <a href="https://utalabs.tech/">El resto de la familia<small>UTA · ATC · Sentinel · Interceptor</small></a>
-      </div>
-    </div>
-    <p class="fline">SLOTH es un agente nocturno de <a href="https://alicelabs.site/">AliceLabs LLC</a> — una acción, un eslabón; una noche, un recibo.<br>
-    Verificado en tu navegador con WebCrypto, sin preguntarle a nadie. <a href="/receipt/latest.json">JSON crudo</a> · <a href="/verify">/verify</a> · <a href="https://alicelabs.site/">alicelabs.site</a></p>
+    <nav class="flinks" aria-label="páginas relacionadas">
+      <a href="https://utalabs.tech/">UTA</a><span class="sep">·</span><a href="https://utalabs.tech/atc/">ATC</a><span class="sep">·</span><a href="https://utalabs.tech/sentinel/">Sentinel</a><span class="sep">·</span><a href="https://utalabs.tech/interceptor/">Interceptor</a><span class="sep">·</span><a href="https://wall.utalabs.tech/">UTA-Shield</a><span class="sep">·</span><a href="https://bernaudio.utalabs.tech/">BernAudio</a><span class="sep">·</span><a href="https://alicelabs.site/">AliceLabs LLC</a><span class="sep">·</span><a class="soft" href="/receipt/latest.json">JSON</a><span class="sep">·</span><a class="soft" href="/verify">/verify</a>
+    </nav>
+    <p class="fline">© 2026 AliceLabs LLC</p>
   </footer>
 </div>
 
